@@ -8,9 +8,9 @@ const Navbar = () => {
       <img src={logo} alt="" />
       <div className='navigasi'>
         <div className='navitem'>
-          <div className='item'><p>Financial Course</p></div>
-          <div className='item'><p>Financial Article</p></div>
-          <div className='item'><p>Financial Record</p></div>
+          <div className='item animasi-left-right'><p>Financial Course</p></div>
+          <div className='item animasi-left-right'><p>Financial Article</p></div>
+          <div className='item animasi-left-right'><p>Financial Record</p></div>
           <button className='tombollogin'>Login</button>
         </div>
       </div>
