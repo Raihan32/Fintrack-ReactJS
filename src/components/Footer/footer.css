@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    gap: 20px;
     margin-top: 180px;
 }
 .footer{
@@ -56,7 +56,7 @@ height: 215.07px;
 flex-direction: column;
 align-items: center;
 
-width: 623px;
+
 
 }
 .barfooter{
@@ -125,6 +125,6 @@ line-height: 60px;
 /* or 125% */
 color: #FAFAFA;
 display: flex;
-align-items: center;
+
 text-align: center;
 }

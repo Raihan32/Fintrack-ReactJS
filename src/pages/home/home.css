@@ -187,6 +187,7 @@ color: #030842;
     isolation: isolate;
     background-color: #030842;
     width: 1186px;
+    border-radius: 40px 40px;
     height: 350px;
 }
 .courseisi{
@@ -247,7 +248,7 @@ padding: 0px;
 gap: 13px;
 
 color: #FAFAFA;
-width: 946px;
+width: 546px;
 height: 24px;
 font-family: 'Poppins';
 font-style: normal;
