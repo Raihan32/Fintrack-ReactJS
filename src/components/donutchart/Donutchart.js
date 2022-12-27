@@ -21,7 +21,7 @@ function Donutchart()
                     pie:{
                         donut:{
                             labels:{
-                                show:true,
+                                show:false,
                                 total:{
                                     show:false,
                                     
@@ -33,9 +33,11 @@ function Donutchart()
                     }
                 },
                 dataLabels:{
-                    enabled:true,
-                }
-
+                    enabled:false,
+                },
+                legend: {
+                    show: false
+                  }
             }}
             />
             </div>

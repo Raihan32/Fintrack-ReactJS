@@ -9,7 +9,7 @@ import cardartikel from './img/cardartikel.png'
 
 const Home = () => {
   return (
-    <div className='container'>
+    <div className='kontainer'>
       <div className='hero'>
         <div className='textcontainer'>
           <p className='judulhero'>Lets Take Back Control Your Money</p>

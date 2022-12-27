@@ -1,0 +1,47 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 300px;
+    gap: 80px;
+
+    margin: 150px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.formlogin{
+    
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 72px;
+width: 1190.05px;
+height: 578px;
+
+background-color: white;
+border-radius: 20px;
+}
+.fotologin{
+    width: 633.05px;
+    height: 578px;
+
+    border-radius: 20px;
+}
+.formlog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    
+    width: 485px;
+    height: 550.51px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}

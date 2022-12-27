@@ -6,6 +6,8 @@ const Record = () => {
     <div>
     <div className='record'>
       <Donutchart />
+      <button className='addtransaksi'>New Transaksi</button>
+      <div className=''></div>
     </div>
     </div>
   )
