@@ -9,7 +9,7 @@ import cardartikel from './img/cardartikel.png'
 
 const Home = () => {
   return (
-    <div className='container'>
+    <div className='kontainer'>
       <div className='hero'>
         <div className='textcontainer'>
           <p className='judulhero'>Lets Take Back Control Your Money</p>
@@ -26,7 +26,7 @@ const Home = () => {
         </div>
       </div>
       <div className='course'>
-        <div className='coursejudul'><p>Financial Course Preview</p><p>read more</p>
+        <div className='coursejudul'><p className='judulcontent'>Financial Course Preview</p><p className='more'>read more</p>
           </div>
           <div className='cousepriview'>
             <div className='courseisi'><img src={imgcourse} alt="" />
@@ -39,10 +39,10 @@ const Home = () => {
                     <p>Yosua Putra</p>
                   </div>
                   <div className='deskripsicourseitem'>
-                    <p>Yosua Putra</p>
+                    <p>Manajemen Keuangan</p>
                   </div>
                   <div className='deskripsicourseitem'>
-                    <p>Yosua Putra</p>
+                    <p>15 Videos</p>
                   </div>
                   <div className='deskripsicourseitem'>
                     <p>Yosua Putra</p>
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
           </div>
           <div className='article'>
-            <div className='coursejudul'><p>Financial Course Preview</p><p>read more</p></div>
+            <div className='coursejudul'><p className='judulcontent'>Financial Artikel Preview</p><p className='more'>read more</p></div>
             <div className='cardsartikel'>
               <div className='cardartikel'><img src={cardartikel} alt="" /><div className='deskripsiartikel'><p className='judulartikel'>Lorem Ipsum is simply</p><p className='deskripsiartikel'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p></div></div>
               <div className='cardartikel'><img src={cardartikel} alt="" /><div className='deskripsiartikel'><p className='judulartikel'>Lorem Ipsum is simply</p><p className='deskripsiartikel'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p></div></div>

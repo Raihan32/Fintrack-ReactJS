@@ -1,10 +1,9 @@
-.container{
+.kontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     gap: 180px;
-
 }
 .hero{
     display: flex;
@@ -187,6 +186,7 @@ color: #030842;
     isolation: isolate;
     background-color: #030842;
     width: 1186px;
+    border-radius: 40px 40px;
     height: 350px;
 }
 .courseisi{
@@ -236,7 +236,7 @@ align-items: flex-start;
 padding: 0px;
 gap: 13px;
 
-width: 246px;
+width: 346px;
 height: 135px;
 }
 .deskripsicourseitem{
@@ -247,7 +247,7 @@ padding: 0px;
 gap: 13px;
 
 color: #FAFAFA;
-width: 146px;
+width: 546px;
 height: 24px;
 font-family: 'Poppins';
 font-style: normal;
@@ -279,14 +279,14 @@ align-items: center;
     gap: 20px;
 
     width: 1344px;
-    height: 359px;
+    height: auto;
 }
 .cardartikel{
     display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
-gap: 18px;
+
 
 width: 321px;
 height: 359px;
@@ -302,8 +302,6 @@ border-radius: 50px 0px 0px 0px;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    
-
     width: 300px;
     height: 141px;
 }
@@ -336,4 +334,32 @@ align-items: center;
 /* Primary/Palette 5 */
 
 color: #030842;
+}
+.judulcontent{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 56px;
+line-height: 34px;
+/* identical to box height, or 61% */
+
+display: flex;
+align-items: center;
+
+/* Primary/Palette 5 */
+
+color: #030842;
+}
+.more{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+/* identical to box height, or 108% */
+
+display: flex;
+align-items: center;
+
+color: #000000;
 }
