@@ -2,6 +2,7 @@ import React from 'react'
 import './artikel.css'
 import hero from './img/hero.png'
 import card from './img/card.png'
+import { NavLink } from 'react-router-dom'
 
 const Artikel = () => {
   return (
@@ -22,7 +23,7 @@ dummy text of the printing and typesetting </p>
 dummy text of the printing and typesetting </p><button s>Read More</button></div> <div className="desk2"><p>Lorem Ipsum is simply 
 dummy text of the printing and typesetting </p><button s>Read More</button></div></div>
                 </div>
-                <div className="isiartikel"><p>All Articles</p><div className='cardsartikel'><img src={card} /><div className='cardisiartikel'><p className='cardisiartikeljudul'>Cara Cermat Mencapai Financial Freedom</p> <p>Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang.</p><p>readmore</p></div></div>
+                <div className="isiartikel"><p>All Articles</p><NavLink to="/isiartikel"><div className='cardsartikel'><img src={card} /><div className='cardisiartikel'><p className='cardisiartikeljudul'>Cara Cermat Mencapai Financial Freedom</p> <p>Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang.</p><p>readmore</p></div></div></NavLink>
                 <div className='cardsartikel'><img src={card} /><div className='cardisiartikel'><p className='cardisiartikeljudul'>Cara Cermat Mencapai Financial Freedom</p> <p>Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang.</p><p>readmore</p></div></div><div className='cardsartikel'><img src={card} /><div className='cardisiartikel'><p className='cardisiartikeljudul'>Cara Cermat Mencapai Financial Freedom</p> <p>Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang.</p><p>readmore</p></div></div><div className='cardsartikel'><img src={card} /><div className='cardisiartikel'><p className='cardisiartikeljudul'>Cara Cermat Mencapai Financial Freedom</p> <p>Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang.</p><p>readmore</p></div></div>
                 </div>
             </div>

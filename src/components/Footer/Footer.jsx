@@ -14,7 +14,7 @@ const Footer = () => {
     </div>
     
     </div>
-    <div className='barfooter'><div className='copyright'><p >© 2022 Financial Tracking Co., Ltd. All rights reserved.</p></div><div className='about'><p>about us</p><p>Privacy Policy</p></div></div>
+    <div className='barfooter'><div className='container m-2'><p >© 2023 Financial Tracking Co., Ltd. All rights reserved.</p></div><div className='about'><p>about us</p><p>Privacy Policy</p></div></div>
     </div>
     
   )

@@ -12,7 +12,7 @@ const Home = () => {
     <div className='kontainer'>
       <div className='hero'>
         <div className='textcontainer'>
-          <p className='judulhero'>Lets Take Back Control Your Money</p>
+          <p className='judulhero'>Let's Take Back Control Your Money</p>
           <p className='subhero'>Make your money work harder than you. This web may help you to how to make your money works</p>
         </div>
         <img src={hero} alt="" />

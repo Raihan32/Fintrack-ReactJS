@@ -1,4 +1,4 @@
-.record{
+/* .record{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,4 +22,148 @@
     height: 54px;
     background: #FAFAFA;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+} */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    font-family: 'Poppins';
+}
+    
+
+
+h1{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height */
+
+
+background: linear-gradient(267.81deg, #3C3DBF 1.92%, #2998FF 106.64%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+h2{
+    font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+/* identical to box height */
+
+
+color: #454545;
+
+}
+.title-md{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.title-sm{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+.card-wraper{
+
+background: #FFFFFF;
+border: 1px solid #F4F4F4;
+box-shadow: 0px 6px 30px rgba(206, 206, 206, 0.25);
+border-radius: 14px;
+}
+
+.icon-wrapper-IN{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+width: 35px;
+height: 35px;
+color: #3C3DBF;
+background: #E4E5FF;
+border-radius: 6px;
+}
+
+.icon-wrapper-OUT{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+width: 35px;
+height: 35px;
+color: #FF3666;
+background: #ffecf0;
+border-radius: 6px;
+}
+
+h3{
+    font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #454545;
+
+
+}
+.text-ungu{
+    color: #3C3DBF;
+}
+h4{
+    font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+color: #3C3DBF;
+
+}
+
+.button{
+border-radius: 8px;
+border: none;
+color: #E4E5FF;
+}
+
+.btn-ungu{
+    background: #3C3DBF;
+}
+.btn-pink{
+    background: #FF3666;
+}
+
+h6{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #454545;
+}
+
+h5{
+    font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+}
+.text-money-in{
+    font-weight: 600;
+    color: #3C3DBF;
+}
+.text-money-out{
+    font-weight: 600;
+    color: #FF3666;
 }

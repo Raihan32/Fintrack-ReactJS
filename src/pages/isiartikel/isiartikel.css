@@ -1,0 +1,60 @@
+.coverisiartikel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+
+  width: 100%;
+  height: 420px;
+}
+.artikeldes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 51px;
+
+  width: 1440px;
+  height: 1166px;
+}
+.des {
+  font-family: 'Poppins';
+  flex-direction: row;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 98px;
+  margin-left: 100px;
+  /* or 140% */
+  margin-top: 300px;
+  color: #060f76;
+  align-items: justify;
+  letter-spacing: -0.005em;
+}
+
+.des1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 98px;
+  margin-left: 0px;
+  /* or 140% */
+  margin-top: 100px;
+  color: #060f76;
+  align-items: justify;
+  letter-spacing: -0.005em;
+}
+.desc {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 50px;
+  margin-right: 90px;
+  margin-left: 5px;
+  align-items: center;
+  margin-bottom: 50px;
+  color: #000000;
+}
