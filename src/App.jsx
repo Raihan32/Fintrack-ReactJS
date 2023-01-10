@@ -7,6 +7,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/Register/Register";
 import Artikel from "./pages/Artikel/Artikel";
 // import Isiartikel from "./pages/isiartikel/Isiartikel";
+import Course from "./pages/course/Course";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/fa" element={<Artikel />} />
         {/* <Route path="/isiartikel" element={<Isiartikel />} /> */}
+        <Route path="/fc" element={<Course />} />
       </Routes>
       <Footer />
     </>
