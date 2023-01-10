@@ -18,15 +18,15 @@ const Cards = ({ menuItem, query }) => {
               variant="top"
               src={item.image}
               alt={item.heading}
-              className="thumbnail"
+              className="card-thumbnail"
             />
-            <div className="container">
-              <p className="information">
+            <div className="card-container">
+              <p className="card-information">
                 {item.id} | {item.duration} | {item.video} | {item.kategori}
               </p>
-              <h5 className="title">{item.heading}</h5>
-              <p className="deskripsi">{item.description}</p>
-              <span className="type">
+              <h5 className="card-title">{item.heading}</h5>
+              <p className="card-deskripsi">{item.description}</p>
+              <span className="card-type">
                 <FaRegFolderOpen size={21} style={{ color: "#8F97F9" }} />
                 {item.level}
               </span>

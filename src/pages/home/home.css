@@ -104,7 +104,6 @@
   align-items: center;
   padding: 34px 40px;
   gap: 25px;
-
   width: 380px;
   height: 325.62px;
 
@@ -215,12 +214,9 @@
   font-size: 32px;
   line-height: 42px;
   /* or 131% */
-
   display: flex;
   align-items: center;
-
   /* Neutral/Palette 1 */
-
   color: #fafafa;
 }
 .lp-deskripsicourse {
