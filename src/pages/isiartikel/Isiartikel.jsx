@@ -1,12 +1,12 @@
 import React from 'react';
-
+import Cover from '../Isiartikel/img/coverisi.png';
 import './isiartikel.css';
 
 const Isiartikel = () => {
   return (
     <div>
       <div className="coverisiartikel">
-        {/* <img src={Cover} alt="Cover"></img> */}
+        <img src={Cover} alt="Cover"></img>
       </div>
       <div className="artikeldes">
         <div className="des">
