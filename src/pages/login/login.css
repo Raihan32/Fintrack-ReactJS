@@ -45,3 +45,9 @@ flex: none;
 order: 1;
 flex-grow: 0;
 }
+
+@media (min-width: 1025px) {
+    .h-custom-2 {
+      height: 100%;
+      }
+    }

@@ -40,11 +40,11 @@ line-height: 60px;
 /* identical to box height */
 
 
-background: linear-gradient(267.81deg, #3C3DBF 1.92%, #2998FF 106.64%);
+background: #2B459D;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
-text-fill-color: transparent;
+-text-fill-color: transparent;
 
 }
 h2{
@@ -68,7 +68,7 @@ color: #454545;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
 }
 .card-wraper{
@@ -89,8 +89,8 @@ gap: 10px;
 
 width: 35px;
 height: 35px;
-color: #3C3DBF;
-background: #E4E5FF;
+color: #3BB54A;
+background: #CDFC6C;
 border-radius: 6px;
 }
 
@@ -122,8 +122,13 @@ color: #454545;
 
 }
 .text-ungu{
-    color: #3C3DBF;
+    color: #3BB54A;
 }
+
+.text-pink{
+    color: #FF3666;
+}
+
 h4{
     font-weight: 500;
 font-size: 20px;
@@ -139,7 +144,7 @@ color: #E4E5FF;
 }
 
 .btn-ungu{
-    background: #3C3DBF;
+    background: linear-gradient(270.46deg, #6DB656 3.04%, #8CC346 20.86%, #A3CD3A 36.7%, #9CCB3B 45.62%, #87C73E 59.48%, #66BF43 77.3%, #3BB54A 95.13%);
 }
 .btn-pink{
     background: #FF3666;
@@ -161,7 +166,7 @@ line-height: 21px;
 }
 .text-money-in{
     font-weight: 600;
-    color: #3C3DBF;
+    color: #3BB54A;
 }
 .text-money-out{
     font-weight: 600;

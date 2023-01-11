@@ -46,7 +46,7 @@ const Course = () => {
   //akhir pagination
 
   return (
-    <Container fluid className="content">
+    <Container className="content">
       <div className="filter">
         <Breadcrumb breadcrumb>
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
@@ -74,9 +74,9 @@ const Course = () => {
 
       <div className="container-course">
         <div className="cards-course">
-          <h3 className="title-course">
+          <h1 className="title-course">
             Kembangkan kemampuan anda dalam memehami keuangan di Fintrech
-          </h3>
+          </h1>
 
           <Card menuItem={currentPosts} query={query} />
         </div>

@@ -22,7 +22,7 @@ const Navbar = () => {
         <li className="nav-item">
         <NavLink className='nav-link' to="/fr"><p className='item animasi-left-right'>Financial Record</p></NavLink>
         </li>
-        <li><NavLink style={{textDecoration : 'none'}} to="/login"><button className='tombollogin'>Login</button></NavLink></li>
+        <li><NavLink style={{textDecoration : 'none'}} to="/login"><button className='tombollogin m-2'>Login</button></NavLink></li>
       </ul>
     </div>
   </div>

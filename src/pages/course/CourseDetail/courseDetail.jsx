@@ -4,7 +4,7 @@ import "../CourseDetail/coursedetail.css";
 
 const courseDetail = () => {
   return (
-    <Container className="container-course">
+    <div className="container-course">
       <div className="course_detail">
         <img
           src={
@@ -60,7 +60,7 @@ const courseDetail = () => {
           </p>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
