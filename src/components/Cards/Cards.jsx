@@ -37,7 +37,7 @@ const Cards = ({ menuItem, query }) => {
               <p className="card-deskripsi">{item.description}</p>
               <span className="card-type">
                 <FaRegFolderOpen size={21} style={{ color: "#8F97F9" }} />
-                {item.level}
+                {item.kategori}
               </span>
             </div>
           </Card>

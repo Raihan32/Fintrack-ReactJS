@@ -185,7 +185,7 @@ const DetailCourse = [
     description:
       "Pelajari selengkapnya cara mengelola aktivitas penerimaan dan pengeluaran kas dengan sistem dan SOP yang tepat.",
     level: "beginner",
-    kategori: "uang",
+    kategori: "obligasi",
     title_description: "Lorem50",
     content_description1: "Lorem60",
   },
