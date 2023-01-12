@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Breadcrumb } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 import VideoPlayer from "../../../components/playlist/videoPlayer";
 import { FaRegPauseCircle, FaRegPlayCircle } from "react-icons/fa";
 import Card from "../../../components/Cards/Cards";
@@ -217,6 +218,7 @@ const Lesson = () => {
           ))}
         </Swiper>
       </div>
+      <Outlet />
     </Container>
   );
 };

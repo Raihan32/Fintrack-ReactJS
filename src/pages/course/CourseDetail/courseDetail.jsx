@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, Outlet } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Detail from "../../../constants/DetailCourse";
 import "../CourseDetail/coursedetail.css";
@@ -31,7 +31,7 @@ const CourseDetail = () => {
               BACK
             </button>
             <Link
-              to={`/fc`}
+              to={`/fc/lesson`}
               type="button"
               className="course-button-detail"
               // onClick={() => {

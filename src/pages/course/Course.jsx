@@ -17,7 +17,7 @@ const Course = () => {
 
   console.log(allKategori);
 
-  const [menuItem, setMenuItem, setMenuLevel] = useState(items);
+  const [menuItem, setMenuItem] = useState(items);
   const [buttons, setButtons] = useState(allKategori);
 
   const filterKategori = (button) => {
@@ -32,12 +32,11 @@ const Course = () => {
   // akhir filter
 
   //filter level
-
+  const [menuItemLevel, setMenuItemLevel] = useState(items);
   const filterLevel = (buttonLevel) => {
-    const filteredLevel = items.filterLevel(
-      (item) => item.level === buttonLevel
-    );
-    setMenuLevel(filteredLevel);
+    const menuItemLevel = items.filter((item) => item.level === buttonLevel);
+    setMenuItemLevel(menuItemLevel);
+    console.log(menuItemLevel);
   };
   //akhir filter level
 

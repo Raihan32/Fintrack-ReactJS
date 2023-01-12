@@ -1,7 +1,7 @@
 import React from "react";
 // import { useState } from "react";
 
-const LevelCourse = (filterLevel) => {
+const LevelCourse = ({ filterLevel }) => {
   return (
     <div className="lv-radio-course">
       <p>Tingkatan</p>
@@ -21,7 +21,7 @@ const LevelCourse = (filterLevel) => {
         <input
           type="radio"
           name="radio"
-          // onClick={() => filterLevel("beginner")}
+          onClick={() => filterLevel("beginner")}
         />
         Beginner
       </label>
@@ -29,7 +29,7 @@ const LevelCourse = (filterLevel) => {
         <input
           type="radio"
           name="radio"
-          // onClick={() => filterLevel("intermediate")}
+          onClick={() => filterLevel("intermediate")}
         />
         Intermediate
       </label>
