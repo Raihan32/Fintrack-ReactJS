@@ -6,6 +6,7 @@ import fa from "./img/fa.png";
 import fr from "./img/fr.png";
 import imgcourse from "./img/imgcourse.png";
 import cardartikel from "./img/cardartikel.png";
+import AOS from 'aos';
 
 const Home = () => {
   return (
@@ -20,9 +21,11 @@ const Home = () => {
         </div>
         <img src={hero} alt="" />
       </div>
+      
       <div className="lp-ourfeature">
         <p className="lp-subjudul">Our Features</p>
         <div className="lp-cards">
+        <div data-aos="flip-left">
           <div className="lp-card">
             <img src={fc} alt="" />
             <div className="lp-textcard">
@@ -32,6 +35,8 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div data-aos="flip-left">
           <div className="lp-card">
             <img src={fa} alt="" />
             <div className="lp-textcard">
@@ -41,6 +46,8 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div data-aos="flip-left">
           <div className="lp-card">
             <img src={fr} alt="" />
             <div className="lp-textcard">
@@ -52,6 +59,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
       <div className="lp-course">
         <div className="lp-coursejudul">
           <p className="lp-judulcontent">Financial Course Preview</p>
@@ -133,5 +141,5 @@ const Home = () => {
     </div>
   );
 };
-
+AOS.init();
 export default Home;
