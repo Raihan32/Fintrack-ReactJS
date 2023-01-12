@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegFolderOpen } from "react-icons/fa";
 // import { useState } from "react";
 
-const FilterCourse = ({ button, filter }) => {
+const FilterCourse = ({ button, filterKategori }) => {
   return (
     <div className="kategori-course">
       <p>Kategori</p>
@@ -12,7 +12,7 @@ const FilterCourse = ({ button, filter }) => {
             <button
               type="button"
               className="button-kategori"
-              onClick={() => filter(kategori)}
+              onClick={() => filterKategori(kategori)}
               // className={kategori == currentPage ? "active" : ""}
             >
               <FaRegFolderOpen

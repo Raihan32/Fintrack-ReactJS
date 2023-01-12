@@ -17,10 +17,10 @@ const Course = () => {
 
   console.log(allKategori);
 
-  const [menuItem, setMenuItem] = useState(items);
+  const [menuItem, setMenuItem, setMenuLevel] = useState(items);
   const [buttons, setButtons] = useState(allKategori);
 
-  const filter = (button) => {
+  const filterKategori = (button) => {
     if (button === "All") {
       setMenuItem(items);
       return;
@@ -30,6 +30,16 @@ const Course = () => {
     setMenuItem(filteredData);
   };
   // akhir filter
+
+  //filter level
+
+  const filterLevel = (buttonLevel) => {
+    const filteredLevel = items.filterLevel(
+      (item) => item.level === buttonLevel
+    );
+    setMenuLevel(filteredLevel);
+  };
+  //akhir filter level
 
   // filter search
   const [query, setQuery] = useState("");
@@ -46,10 +56,10 @@ const Course = () => {
   //akhir pagination
 
   return (
-    <Container className="content">
+    <Container fluid className="content">
       <div className="filter">
         <Breadcrumb breadcrumb>
-          <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item active>Detail Course</Breadcrumb.Item>
         </Breadcrumb>
         <form className="navigation">
@@ -67,8 +77,8 @@ const Course = () => {
             />
           </div>
           <Search setQuery={(query) => setQuery(query)} />
-          <LevelCourse />
-          <FilterCourse button={buttons} filter={filter} />
+          <LevelCourse filterLevel={filterLevel} />
+          <FilterCourse button={buttons} filterKategori={filterKategori} />
         </form>
       </div>
 
@@ -77,7 +87,6 @@ const Course = () => {
           <h1 className="title-course">
             Kembangkan kemampuan anda dalam memehami keuangan di Fintrech
           </h1>
-
           <Card menuItem={currentPosts} query={query} />
         </div>
         <Pagination

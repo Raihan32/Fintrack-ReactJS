@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
 
-const lesson = () => {
+const Lesson = () => {
   return (
     <Container className="container-lesson">
       <div className="container1-lesson">
@@ -21,8 +21,8 @@ const lesson = () => {
           <div className="videoplayer">
             <div className="breadcrumb-list">
               <Breadcrumb className="list">
-                <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                <Breadcrumb.Item href="#">Detail Course</Breadcrumb.Item>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item href="/fc">Course</Breadcrumb.Item>
                 <Breadcrumb.Item active>Course Lesson</Breadcrumb.Item>
               </Breadcrumb>
             </div>
@@ -221,4 +221,4 @@ const lesson = () => {
   );
 };
 
-export default lesson;
+export default Lesson;

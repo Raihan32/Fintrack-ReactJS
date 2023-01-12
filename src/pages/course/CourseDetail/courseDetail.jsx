@@ -1,67 +1,63 @@
 import React from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import Detail from "../../../constants/DetailCourse";
 import "../CourseDetail/coursedetail.css";
 
-const courseDetail = () => {
+const CourseDetail = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   return (
-    <div className="container-course">
-      <div className="course_detail">
+    <Container className="container-course-detail">
+      <div className="course-detail">
         <img
-          src={
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          }
+          src={Detail[id - 1].image}
           alt="foto-1"
-          className="cover-course"
+          className="course-cover-detail"
         />
-        <div className="card-detail">
-          <div className="description">
-            <p className="title-detail">
-              <span style={{ fontWeight: "bold" }}>Auditing : </span>Konsep
-              Dasar Audit Laporan Keuangan
+        <div className="course-card-detail">
+          <div className="course-detail-description">
+            <p className="course-detail-title">
+              <span style={{ fontWeight: "bold" }}>
+                {Detail[id - 1].heading}
+              </span>
             </p>
-            <p className="description-detail">
-              Pahami cara tepat mengelola proyek untuk mencapai target
-              penyelesaian proyek secara efektif dan efisien.
-            </p>
-            <button type="button" className="button-detail">
-              Ambil Course
+            <p className="course-detail-description"></p>
+            <button
+              className="course-button-detail"
+              onClick={() => navigate(-1)}
+            >
+              BACK
             </button>
+            <Link
+              to={`/fc`}
+              type="button"
+              className="course-button-detail"
+              // onClick={() => {
+              //   navigate(`/lesson`);
+              // }}
+            >
+              Ambil Course
+            </Link>
           </div>
         </div>
       </div>
 
-      <div className="course-detail">
-        <div className="description-course">
+      <div className="course-detail-course">
+        <div className="course-detail-description-course">
           <h4 style={{ color: "#060F76", fontWeight: "700" }}>
             Auditing : Konsep Dasar Audit Laporan Keuangan
           </h4>
-          <p>
-            Disini peran seorang auditor menjadi penting! Setelah dilakukannya
-            proses audit, auditor akan memberikan laporan dalam bentuk temuan
-            dan rekomendasi atau opini audit. Nah laporan ini akan digunakan
-            oleh pihak-pihak seperti perusahaan itu sendiri (klien),
-            stakeholders atau investor perusahaan, dan bahkan oleh badan
-            pemerintah. Dengan tanggung jawab yang sangat besar tersebut,
-            penting bagi seorang auditor untuk memahami segala proses kerja yang
-            ia akan lakukan, dimulai dari perencanaan, eksekusi, sampai
-            pembuatan laporan.
-          </p>
+          <p>{Detail[id - 1].content_description}.</p>
           <h5 style={{ color: "#060F76", fontWeight: "700" }}>
-            Apa itu laporan auditing?
+            {Detail[id - 1].title_description}
           </h5>
-          <p>
-            Audit laporan keuangan merupakan proses dalam mengumpulkan dan
-            mengevaluasi bukti – bukti temuan atas informasi yang didapat dalam
-            proses pemeriksaan, agar dapat menentukan apakah informasi tersebut
-            telah sesuai dengan apa yang sesungguhnya terjadi dan sesuai dengan
-            kriteria yang berlaku. Tujuan dari audit laporan keuangan adalah
-            untuk memberi keyakinan kepada pengguna laporan keuangan untuk
-            mengambil keputusan.
-          </p>
+          <p>{Detail[id - 1].content_description1}</p>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
-export default courseDetail;
+export default CourseDetail;

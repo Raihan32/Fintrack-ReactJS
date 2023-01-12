@@ -1,9 +1,11 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { FaRegFolderOpen } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import "./card.css";
 
 const Cards = ({ menuItem, query }) => {
+  const navigate = useNavigate();
   return (
     <>
       {menuItem
@@ -13,7 +15,14 @@ const Cards = ({ menuItem, query }) => {
             : item.heading.toLowerCase().includes(query);
         })
         .map((item) => (
-          <Card key={item.id} className="card">
+          <Card
+            key={item.id}
+            className="card"
+            onClick={() => {
+              navigate(`/fc/${item.id}`);
+            }}
+          >
+            {/* <Link to={`/fc/${item.id}`}>DETAILS</Link> */}
             <Card.Img
               variant="top"
               src={item.image}
