@@ -82,11 +82,11 @@ const Course = () => {
       </div>
 
       <div className="container-course">
-        <div className="cards-course">
-          <h1 className="title-course">
+        <div  className="cards-course">
+          <h1  className="title-course">
             Kembangkan kemampuan anda dalam memehami keuangan di Fintrech
           </h1>
-          <Card menuItem={currentPosts} query={query} />
+          <Card  menuItem={currentPosts} query={query} />
         </div>
         <Pagination
           totalPosts={menuItem.length}

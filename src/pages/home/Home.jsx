@@ -65,7 +65,7 @@ const Home = () => {
           <p className="lp-judulcontent">Financial Course Preview</p>
           <p className="lp-more">read more</p>
         </div>
-        <div className="lp-cousepriview">
+        <div data-aos="flip-left" className="lp-cousepriview">
           <div className="lp-courseisi">
             <img src={imgcourse} alt="" />
             <div className="lp-contentisicourse">
@@ -95,8 +95,8 @@ const Home = () => {
           <p className="lp-judulcontent">Financial Artikel Preview</p>
           <p className="lp-more">read more</p>
         </div>
-        <div className="cardsartikel">
-          <div className="lp-cardartikel">
+        <div  className="cardsartikel">
+          <div data-aos="flip-left" className="lp-cardartikel">
             <img src={cardartikel} alt="" />
             <div className="lp-deskripsiartikel">
               <p className="lp-judulartikel">Lorem Ipsum is simply</p>
@@ -106,7 +106,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lp-cardartikel">
+          <div data-aos="flip-left" className="lp-cardartikel">
             <img src={cardartikel} alt="" />
             <div className="lp-deskripsiartikel">
               <p className="lp-judulartikel">Lorem Ipsum is simply</p>
@@ -116,7 +116,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lp-cardartikel">
+          <div  data-aos="flip-left" className="lp-cardartikel">
             <img src={cardartikel} alt="" />
             <div className="lp-deskripsiartikel">
               <p className="lp-judulartikel">Lorem Ipsum is simply</p>
@@ -126,7 +126,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="lp-cardartikel">
+          <div data-aos="flip-left" className="lp-cardartikel">
             <img src={cardartikel} alt="" />
             <div className="lp-deskripsiartikel">
               <p className="lp-judulartikel">Lorem Ipsum is simply</p>

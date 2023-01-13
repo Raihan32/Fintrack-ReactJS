@@ -16,6 +16,7 @@ const Cards = ({ menuItem, query }) => {
         })
         .map((item) => (
           <Card
+          data-aos="zoom-in"  
             key={item.id}
             className="card"
             onClick={() => {
@@ -29,7 +30,7 @@ const Cards = ({ menuItem, query }) => {
               alt={item.heading}
               className="card-thumbnail"
             />
-            <div className="card-container">
+            <div  className="card-container">
               <p className="card-information">
                 {item.id} | {item.duration} | {item.video} | {item.kategori}
               </p>
