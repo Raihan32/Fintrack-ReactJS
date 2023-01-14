@@ -1,0 +1,93 @@
+.container-course-detail {
+  /* border: 1px solid black; */
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+.course-cover-detail {
+  width: 100%;
+  height: 32rem;
+  border-radius: 8px;
+  object-fit: cover;
+  z-index: 0;
+  margin-bottom: 4rem;
+}
+
+.course-card-detaill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+  /* border: 1px solid black; */
+  width: 30rem;
+  height: 20rem;
+  padding: 2rem;
+  backdrop-filter: blur(4.6105px);
+  border-radius: 22px;
+  background: url(../../../assets/bg-cards.svg), rgba(255, 255, 255, 0.76);
+  position: absolute;
+  z-index: 1;
+  top: 20rem;
+  left: 55%;
+}
+
+.course-detail-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* width: 25rem; */
+  /* height: 10rem; */
+  color: #252629;
+  /* border: 1px solid black; */
+}
+
+.course-detail-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 36px;
+  /* border: 1px solid black; */
+}
+
+.course-detail-description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.course-button-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 42px;
+  background: #030842;
+  border-radius: 8px;
+  color: #e3e3e4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.course-detail-course {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.course-detail-description-course {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  /* border: 1px solid black; */
+  font-family: "Poppins";
+  font-style: normal;
+  line-height: 2rem;
+  row-gap: 1rem;
+}

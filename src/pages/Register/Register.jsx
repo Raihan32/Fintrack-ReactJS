@@ -1,34 +1,53 @@
-import React from 'react'
-import './register.css'
-import { NavLink } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+}
+from 'mdb-react-ui-kit';
+import { NavLink, } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import foto from './login.png'
 
 const Register = () => {
   return (
-    <Container>
-    <div className='login'>
-  <div className='formlogin'>
-    <div className='fotologin'>
-    </div>
-    <div className='formlog'>
-    
-      <form style={{marginTop:"90px"}}>
-        <div class="mb-4">
-          <input type="text" placeholder='Username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <MDBContainer>
+    <MDBRow>
+
+      <MDBCol sm='6'>
+
+        <div className='d-flex flex-row ps-5 pt-5 '>
+          <MDBIcon fas icon="crow fa-3x me-3 v" style={{ color: '#709085' }}/>
         </div>
-        <div class="mb-4">
-          <input type="email" placeholder='E-mail' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+
+        <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+
+          <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Sing Up</h3>
+          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Name' id='formControlLg' type='text' size="lg"/>
+          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+
+          <NavLink to="/"><Button className="mb-4 px-5 mx-5 w-100" color='info'>Daftar</Button></NavLink>
+          <p className='ms-5'>Don't have an account? <NavLink to="/register" class="link-info">Register here</NavLink></p>
+
         </div>
-        <div class="mb-3">
-          <input type="password" placeholder='Password' class="form-control" id="exampleInputPassword1" />
-        </div>
-        <NavLink to='/login'>  <button type="submit" class="btn btn-primary" style={{marginTop:"20px",marginBottom:"20px", margin:"0px",padding:"20px", width:"100px"}}>Submit</button></NavLink>
-        <p>Belum Punya Akun?<NavLink to='/register'> <span style={{color:"red"}}> Daftar</span></NavLink></p>
-      </form>
-    </div>
-  </div>
-</div>
-    </Container>
+
+      </MDBCol>
+
+      <MDBCol sm='6' className='d-none d-sm-block px-0'>
+        <img src={foto}
+          alt="Login image"  style={{objectFit: 'cover', objectPosition: 'left', height:"550px", width:"550px"}} />
+      </MDBCol>
+
+    </MDBRow>
+
+  </MDBContainer>
   )
 }
 
