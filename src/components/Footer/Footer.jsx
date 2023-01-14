@@ -8,6 +8,7 @@ const Footer = () => {
     <div>
     <div className='kaki'>
     <div className='footer'>
+      
       <div className='platfooter'><div className='isiplat'><div className='logoplat'><img src={logoputih} alt="" /><p className='logodes'>Designed and Developed by Hustler Team</p><img src={sosmed} alt="" /></div>
       <div className='desplat'><p className='textfooter'>Take your finances to the next levels!</p><p className='logodes'>Don't hesite, money matters.</p></div></div></div>
     

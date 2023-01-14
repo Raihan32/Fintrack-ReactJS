@@ -4,7 +4,7 @@ import './isiartikel.css';
 
 const Isiartikel = () => {
   return (
-    <div>
+    <div className='container'>
       <div className="coverisiartikel">
         <img src={Cover} alt="Cover" className="coverisi"></img>
       </div>
