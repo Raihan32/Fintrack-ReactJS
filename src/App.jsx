@@ -7,9 +7,11 @@ import Login from "./pages/login/Login";
 import Artikel from "./pages/Artikel/Artikel";
 import Isiartikel from "./pages/isiartikel/Isiartikel";
 import Course from "./pages/course/Course";
-import CourseDetail from "./pages/course/CourseDetail/courseDetail";
-import Lesson from "./pages/course/lessonDetail/lesson";
+import CourseDetail from "./pages/course/CourseDetail/CourseDetail";
+import Lesson from "./pages/course/lessonDetail/Lesson";
 import Register from "./pages/Register/Register";
+import Privacyolicy from "./pages/PrivacyPolicy/Privacyolicy";
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/isiartikel" element={<Isiartikel />} />
         <Route exact path="/fc" element={<Course />} />
         <Route path="/fc/:id" element={<CourseDetail />} />
+        <Route path="/privacyolicy" element={<Privacyolicy />} />
         {/* <Route path="/isiartikel" element={<Isiartikel />} /> */}
       </Routes>
       <Footer />

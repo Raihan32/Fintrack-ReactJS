@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './footer.css'
 import logoputih from './img/logoputih.png'
 import sosmed from './img/sosmed.png'
@@ -15,7 +16,7 @@ const Footer = () => {
     </div>
     
     </div>
-    <div className='barfooter'><div className='container m-2'><p >© 2023 Financial Tracking Co., Ltd. All rights reserved.</p></div><div className='about'><p>about us</p><p>Privacy Policy</p></div></div>
+    <div className='barfooter'><div className='container m-2'><p >© 2023 Financial Tracking Co., Ltd. All rights reserved.</p></div><div className='about'><p>About us</p><NavLink style={{ textDecoration: "none", color:"black" }} to="/privacyolicy"><p>Privacy Policy</p></NavLink></div></div>
     </div>
     
   )
