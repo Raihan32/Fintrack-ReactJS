@@ -65,7 +65,7 @@ const Navbar = () => {
                 <button className="tombollogin m-2">Login</button>
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item profile">
               <NavLink className="nav-link" to="/">
                 <p className="item animasi-left-right">{name}</p>
               </NavLink>

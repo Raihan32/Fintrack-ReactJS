@@ -128,7 +128,7 @@ const Home = () => {
           <div className="lp-coursejudul">
             <p className="lp-judulcontent">Financial Course Preview</p>
             <NavLink className="lp-more" to="/fc">
-              Read more
+              Read more <i class="bi bi-arrow-right-circle mx-2"></i>
             </NavLink>
           </div>
         </div>
@@ -155,16 +155,16 @@ const Home = () => {
                   </div>
                   <div className="lp-deskripsicourse">
                     <div className="lp-deskripsicourseitem">
-                      <p>{user.duration}</p>
+                      <p><i class="bi bi-clock"></i> {user.duration}</p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p>{user.kategori}</p>
+                      <p><i class="bi bi-book"></i> {user.kategori}</p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p>{user.level}s</p>
+                      <p><i class="bi bi-award"></i> {user.level}s</p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p>{user.video}</p>
+                      <p><i class="bi bi-film"></i> {user.video}</p>
                     </div>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ const Home = () => {
           <div className="lp-coursejudul">
             <p className="lp-judulcontent">Financial Artikel Preview</p>
             <NavLink className="lp-more" to="/fa">
-              Read more
+              Read more <i class="bi bi-arrow-right-circle mx-2"></i>
             </NavLink>
           </div>
         </div>

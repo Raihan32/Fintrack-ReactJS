@@ -107,3 +107,7 @@ color: #030842;
     width: 90%;
     background: #030842;
   }
+.profile{
+  justify-content: center;
+  align-items: center;
+}

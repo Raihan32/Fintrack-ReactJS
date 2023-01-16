@@ -58,8 +58,10 @@ const Login = () => {
       await axios.post("http://localhost:5000/login", {
         email: email,
         password: password,
+        
       });
-      navigate("/");
+      
+      navigate("/", {replace: true});
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
