@@ -1,30 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
-import jwtDecode from 'jwt-decode';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import jwtDecode from "jwt-decode";
 import "./navbar.css";
 import logo from "./img/logofin.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [name, setName] = useState('');
-  const [token, setToken] = useState('');
+  const [name, setName] = useState("");
+  const [token, setToken] = useState("");
 
   useEffect(() => {
     refreshToken();
-}, []);
+  }, []);
 
-const refreshToken = async () => {
-  try {
-      const response = await axios.get('http://localhost:5000/token');
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/token");
       setToken(response.data.accessToken);
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
-
-      
-  } catch (error) {
-      
-  }
-}
+    } catch (error) {}
+  };
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -63,7 +59,7 @@ const refreshToken = async () => {
                 <p className="item animasi-left-right">Financial Record</p>
               </NavLink>
             </li>
-            
+
             <li>
               <NavLink style={{ textDecoration: "none" }} to="/login">
                 <button className="tombollogin m-2">Login</button>

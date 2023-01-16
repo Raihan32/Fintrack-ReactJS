@@ -13,15 +13,16 @@ import "./course.css";
 
 const Course = () => {
   // filter kategori
-  const allKategori = ["All", ...new Set(items.map((item) => item.kategori))];
-
-  console.log(allKategori);
+  const allKategori = [
+    "Semua Kategori",
+    ...new Set(items.map((item) => item.kategori)),
+  ];
 
   const [menuItem, setMenuItem] = useState(items);
   const [buttons, setButtons] = useState(allKategori);
 
   const filterKategori = (button) => {
-    if (button === "All") {
+    if (button === "Semua Kategori") {
       setMenuItem(items);
       return;
     }
@@ -32,17 +33,28 @@ const Course = () => {
   // akhir filter
 
   //filter level
+  const allLevel = [
+    "Semua Level",
+    ...new Set(items.map((fungsi) => fungsi.level)),
+  ];
+
   const [menuItemLevel, setMenuItemLevel] = useState(items);
-  const filterLevel = (buttonLevel) => {
-    const menuItemLevel = items.filter((item) => item.level === buttonLevel);
-    setMenuItemLevel(menuItemLevel);
-    console.log(menuItemLevel);
+  const [radios, setRadios] = useState(allLevel);
+
+  const filterLevel = (radio) => {
+    if (radio === "Semua Level") {
+      setMenuItemLevel(items);
+      return;
+    }
+
+    const filteredLevel = items.filter((fungsi) => fungsi.level === radio);
+    setMenuItemLevel(filteredLevel);
   };
   //akhir filter level
 
   // filter search
   const [query, setQuery] = useState("");
-  console.log(query);
+
   // akhir search
 
   //filter pagination
@@ -76,17 +88,17 @@ const Course = () => {
             />
           </div>
           <Search setQuery={(query) => setQuery(query)} />
-          <LevelCourse filterLevel={filterLevel} />
+          <LevelCourse radio={radios} filterLevel={filterLevel} />
           <FilterCourse button={buttons} filterKategori={filterKategori} />
         </form>
       </div>
 
       <div className="container-course">
-        <div  className="cards-course">
-          <h1  className="title-course">
+        <div className="cards-course">
+          <h1 className="title-course">
             Kembangkan kemampuan anda dalam memehami keuangan di Fintrech
           </h1>
-          <Card  menuItem={currentPosts} query={query} />
+          <Card menuItem={currentPosts} query={query} />
         </div>
         <Pagination
           totalPosts={menuItem.length}

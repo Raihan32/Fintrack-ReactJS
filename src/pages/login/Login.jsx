@@ -28,8 +28,8 @@
 
 // export default Login;
 import React, { useState } from "react";
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import {
   MDBBtn,
   MDBContainer,
@@ -47,25 +47,25 @@ import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
-  const navigate = useNavigate(); 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
+  const navigate = useNavigate();
 
   const Auth = async (e) => {
     e.preventDefault();
     try {
-        await axios.post('http://localhost:5000/login', {
-            email: email,
-            password: password
-        });
-        navigate("/");
+      await axios.post("http://localhost:5000/login", {
+        email: email,
+        password: password,
+      });
+      navigate("/");
     } catch (error) {
-        if (error.response) {
-            setMsg(error.response.data.msg);
-        }
+      if (error.response) {
+        setMsg(error.response.data.msg);
+      }
     }
-}
+  };
   return (
     <MDBContainer>
       <MDBRow>
@@ -85,31 +85,35 @@ const Login = () => {
             >
               Log in
             </h3>
-            <form onSubmit={ Auth }>
-            <p>{msg}</p>
+            <form onSubmit={Auth}>
+              <p>{msg}</p>
 
-            <MDBInput
-              wrapperClass="mb-4 mx-5 w-100"
-              label="Email address"
-              
-              type="email"
-              placeholder="email"
-              size="lg"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <MDBInput
-              wrapperClass="mb-4 mx-5 w-100"
-              label="Password"
-              
-              type="password"
-              size="lg"
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+              <MDBInput
+                wrapperClass="mb-4 mx-5 w-100"
+                // label="Email address"s
+                type="email"
+                placeholder="Email address"
+                size="lg"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <MDBInput
+                wrapperClass="mb-4 mx-5 w-100"
+                // label="Password"
+                type="password"
+                size="lg"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
 
-            <button type='submit'  className="btn btn-info mb-4 px-5 mx-5 w-100" color='info'>Daftar</button>
+              <button
+                type="submit"
+                className="btn btn-info mb-4 px-5 mx-5 w-100"
+                color="info"
+              >
+                Daftar
+              </button>
             </form>
             <p className="ms-5">
               Don't have an account?{" "}
