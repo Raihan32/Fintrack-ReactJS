@@ -1,3 +1,10 @@
+@media only screen and (max-width: 600px) {
+    .platfooter{
+        display: block;
+    }
+}
+
+
 .kaki{
     display: flex;
     align-items: center;
@@ -26,7 +33,7 @@
     height: 405.07px;
     
 /* Primary/Palette 5 */
-
+    
     background: #030842;
     border-radius: 26px;
 }

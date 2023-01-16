@@ -19,7 +19,7 @@ const Home = () => {
             to make your money works
           </p>
         </div>
-        <img src={hero} alt="" />
+        <img style={{Width: "100%" , height: "auto"}} src={hero} alt="" />
       </div>
       
       <div className="lp-ourfeature">

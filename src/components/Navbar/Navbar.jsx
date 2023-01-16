@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import "./navbar.css";
 import logo from "./img/logofin.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [name, setName] = useState('');
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    refreshToken();
+}, []);
+
+const refreshToken = async () => {
+  try {
+      const response = await axios.get('http://localhost:5000/token');
+      setToken(response.data.accessToken);
+      const decoded = jwtDecode(response.data.accessToken);
+      setName(decoded.name);
+
+      
+  } catch (error) {
+      
+  }
+}
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
@@ -41,10 +63,15 @@ const Navbar = () => {
                 <p className="item animasi-left-right">Financial Record</p>
               </NavLink>
             </li>
-
+            
             <li>
               <NavLink style={{ textDecoration: "none" }} to="/login">
                 <button className="tombollogin m-2">Login</button>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">
+                <p className="item animasi-left-right">{name}</p>
               </NavLink>
             </li>
           </ul>

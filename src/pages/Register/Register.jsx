@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+
 import {
   MDBBtn,
   MDBContainer,
@@ -16,6 +20,29 @@ import { Button } from 'react-bootstrap';
 import foto from './login.png'
 
 const Register = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confPassword, setConfPassword] = useState('');
+  const [msg, setMsg] = useState('');
+  const navigate = useNavigate();
+
+  const Register = async (e) => {
+    e.preventDefault();
+    try {
+        await axios.post('http://localhost:5000/users', {
+            name: name,
+            email: email,
+            password: password,
+            confPassword: confPassword
+        });
+        navigate("/login");
+    } catch (error) {
+        if (error.response) {
+            setMsg(error.response.data.msg);
+        }
+    }
+}
   return (
     <MDBContainer>
     <MDBRow>
@@ -29,13 +56,15 @@ const Register = () => {
         <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
 
           <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Sing Up</h3>
-          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Name' id='formControlLg' type='text' size="lg"/>
-          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
-
-          <NavLink to="/"><Button className="mb-4 px-5 mx-5 w-100" color='info'>Daftar</Button></NavLink>
+          <form onSubmit={Register}>
+          <p>{msg}</p>
+          <MDBInput className='mb-4 mx-5 w-100' value={name} onChange={(e) => setName(e.target.value)} placeholder='Name'  type='text' size="lg" />
+          <MDBInput className='mb-4 mx-5 w-100' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email address'  type='email' size="lg"  />
+          <MDBInput className='mb-4 mx-5 w-100' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'  type='password' size="lg"  />
+          <MDBInput className='mb-4 mx-5 w-100' value={confPassword} onChange={(e) => setConfPassword(e.target.value)} placeholder='Confrim Password'  type='password' size="lg"  />
+          <button type='submit'  className="btn btn-info mb-4 px-5 mx-5 w-100" color='info'>Daftar</button>
           <p className='ms-5'>Don't have an account? <NavLink to="/register" class="link-info">Register here</NavLink></p>
-
+          </form>
         </div>
 
       </MDBCol>
