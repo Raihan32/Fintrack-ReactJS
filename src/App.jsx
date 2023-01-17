@@ -11,7 +11,7 @@ import CourseDetail from "./pages/course/CourseDetail/CourseDetail";
 import Lesson from "./pages/course/lessonDetail/Lesson";
 import Register from "./pages/Register/Register";
 import Privacyolicy from "./pages/PrivacyPolicy/Privacyolicy";
-
+import About from "./pages/about/About";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/fc" element={<Course />} />
         <Route path="/fc/:id" element={<CourseDetail />} />
         <Route path="/privacyolicy" element={<Privacyolicy />} />
-        {/* <Route path="/isiartikel" element={<Isiartikel />} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>

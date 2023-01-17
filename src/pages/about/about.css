@@ -1,0 +1,48 @@
+.team-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+}
+
+.team-item img {
+  transition: 0.5s;
+}
+
+.team-item:hover img {
+  transform: scale(1.1);
+}
+
+.team-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -50px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.team-item:hover .team-text {
+  bottom: 0;
+  opacity: 1;
+}
+
+.team-item a.btn {
+  color: blue;
+}
+
+.team-item a.btn:hover {
+  color: #ffffff;
+  background: blue;
+  border-color: blue;
+}
+.text {
+  background-color: #6c757d;
+}
+.baris-kahiji {
+  float: left;
+  color: black;
+  font-size: 40px;
+  line-height: 40px;
+  padding-top: 0px;
+  padding-right: 4px;
+}
