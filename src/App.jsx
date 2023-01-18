@@ -12,6 +12,7 @@ import Lesson from "./pages/course/lessonDetail/Lesson";
 import Register from "./pages/Register/Register";
 import Privacyolicy from "./pages/PrivacyPolicy/Privacyolicy";
 import About from "./pages/about/About";
+import Profile from "./components/Profile/Cardprofile";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/fc/:id" element={<CourseDetail />} />
         <Route path="/privacyolicy" element={<Privacyolicy />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </>

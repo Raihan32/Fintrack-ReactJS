@@ -66,7 +66,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item profile">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/profile">
                 <p className="item animasi-left-right">{name}</p>
               </NavLink>
             </li>
