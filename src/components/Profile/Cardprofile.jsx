@@ -1,8 +1,23 @@
 import "./cardprofile.css";
 import Profile from "../Profile/img/fp.png";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Cardprofile = () => {
+  const navigate = useNavigate();
+
+  const Logout = async () => {
+    try {
+        await axios.delete('http://localhost:5000/logout');
+        navigate("/login");
+    } catch (error) {
+        console.log(error);
+    }
+  }
+
   return (
+    <div className="container my-5">
+
     <div>
       <div className="profile-title">
         <p> My Profile</p>
@@ -29,7 +44,7 @@ const Cardprofile = () => {
             <div className="profile-record">Record</div>
             <div className="profile-saved">Saved</div>
           </div>
-          <button className="profile-button"></button>
+          <button className="profile-button" onClick={Logout}></button>
         </div>
       </div>
       <div className="col-md-8">
@@ -54,6 +69,7 @@ const Cardprofile = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

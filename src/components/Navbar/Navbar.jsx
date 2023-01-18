@@ -3,11 +3,14 @@ import axios from "axios";
 import jwtDecode from "jwt-decode";
 import "./navbar.css";
 import logo from "./img/logofin.png";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [token, setToken] = useState("");
+  
+  
 
   useEffect(() => {
     refreshToken();
@@ -21,7 +24,14 @@ const Navbar = () => {
       setName(decoded.name);
     } catch (error) {}
   };
-
+  const Logout = async () => {
+    try {
+        await axios.delete('http://localhost:5000/logout');
+        navigate("/");
+    } catch (error) {
+        console.log(error);
+    }
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
@@ -69,6 +79,8 @@ const Navbar = () => {
               <NavLink className="nav-link" to="/profile">
                 <p className="item animasi-left-right">{name}</p>
               </NavLink>
+            </li>
+            <li>
             </li>
           </ul>
         </div>
