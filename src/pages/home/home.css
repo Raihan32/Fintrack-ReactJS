@@ -161,14 +161,7 @@
   height: 447px;
   margin-top: 148px;
 }
-.lp-coursejudul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 1440px;
-  height: 46px;
-}
+
 .lp-cousepriview {
   display: flex;
   flex-direction: column;
@@ -249,12 +242,48 @@
   width: 1440px;
   height: 500px;
 }
-.cardsartikel {
+
+.lp-coursejudul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1440px;
+  height: 46px;
+}
+
+.lp-judulcontent {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #030842;
+}
+
+.lp-more {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Content Card Atrikel */
+
+/* .cardsartikel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
+/*
 .lp-cardartikel {
   display: flex;
   flex-direction: column;
@@ -267,6 +296,13 @@
   cursor: pointer;
 }
 
+.lp-thumbnail-artikel {
+  object-fit: cover;
+  width: 21rem;
+  height: 13rem;
+  border-radius: 50px 0px 50px 0px;
+}
+
 .lp-contentartikel {
   margin: 10px 10px 10px 10px;
   font-family: "Poppins";
@@ -277,12 +313,6 @@
   align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.lp-thumbnail-artikel {
-  object-fit: cover;
-  width: 21rem;
-  height: 13rem;
-  border-radius: 50px 0px 50px 0px;
 }
 
 .lp-judulartikel {
@@ -306,26 +336,110 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+} */
+
+/* .cardsartikel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+
+.lp-cards-artikel {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  gap: 2rem;
 }
 
-.lp-judulcontent {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 56px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
-  color: #030842;
-}
-.lp-more {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
+.lp-card-artikel {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(40 * 0.5px);
+  overflow: hidden;
   text-decoration: none;
-  color: #000000;
+}
+.lp-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.lp-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(40 * 0.5px);
+  background-color: #f6f6f6;
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+.lp-card-artikel:hover .lp-card-overlay {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.lp-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: calc(40 * 0.5px) 0 0 0;
+  background-color: #f6f6f6;
+  padding: 2em;
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+.lp-card-arc {
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+.lp-card-arc path {
+  fill: #f6f6f6;
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+.lp-card-artikel:hover .lp-card-header {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.lp-card-title {
+  margin: 0 0 0 0;
+  color: #060f76;
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lp-card-description {
+  height: 5.8em;
+  padding: 1em 2em 2em 2em;
+  margin: 0;
+  background-color: #c4cdeb;
+  color: #060f76;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

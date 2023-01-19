@@ -201,18 +201,112 @@ const Home = () => {
             </NavLink>
           </div>
         </div>
-        <div className="cardsartikel">
+
+        <div
+          className="lp-cards-artikel"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+        >
+          <div href="#" class="lp-card-artikel">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmluYW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              class="lp-card-image"
+              alt="card artikel 1"
+            />
+            <div class="lp-card-overlay">
+              <div class="lp-card-header">
+                <svg class="lp-card-arc" xmlns="http://www.w3.org/2000/svg">
+                  <path />
+                </svg>
+
+                <div class="lp-card-header-text">
+                  <h3 class="lp-card-title">
+                    Cara Kelola Keuangan Saat Terjadi Resesi, Ada Rahasianya
+                  </h3>
+                </div>
+              </div>
+              <p class="lp-card-description">
+                Apa yang menjadi 'ketakutan' Presiden Joko Widodo (Jokowi)
+                menjadi kenyataan. Suka tidak suka, Badai besar yang berasal
+                dari dinamika perekonomian global akhirnya datang.
+              </p>
+            </div>
+          </div>
           <div
+            href="#"
+            class="lp-card-artikel"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmluYW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              class="lp-card-image"
+              alt="card artikel 2"
+            />
+            <div class="lp-card-overlay">
+              <div class="lp-card-header">
+                <svg class="lp-card-arc" xmlns="http://www.w3.org/2000/svg">
+                  <path />
+                </svg>
+
+                <div class="lp-card-header-text">
+                  <h3 class="lp-card-title">
+                    Cara Cermat Mencapai Financial Freedom
+                  </h3>
+                </div>
+              </div>
+              <p class="lp-card-description">
+                Untuk mencapai kondisi financial freedom tentunya tidak mudah,
+                terlebih jika tidak diiringi dengan persiapan dan perencanaan
+                yang matang serta gaya hidup hemat. Diperlukan komitmen serta
+                kedisiplinan yang tinggi dalam mengelola keuangan sejak muda.
+                Kita juga harus lebih bijaksana dalam melakukan pengeluaran.
+              </p>
+            </div>
+          </div>
+          <div
+            href="#"
+            class="lp-card-artikel"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZpbmFuY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              class="lp-card-image"
+              alt="card artikel 3"
+            />
+            <div class="lp-card-overlay">
+              <div class="lp-card-header">
+                <svg class="lp-card-arc" xmlns="http://www.w3.org/2000/svg">
+                  <path />
+                </svg>
+
+                <div class="lp-card-header-text">
+                  <h3 class="lp-card-title">
+                    Pentingnya Manajemen Keuangan dalam Kehidupan Sehari-Hari.
+                  </h3>
+                </div>
+              </div>
+              <p class="lp-card-description">
+                Dengan adanya manajemen keuangan maka keuangan seseorang,
+                perusahaan, maupun organisasi akan lebih jelas pengeluaran
+                maupun pendapatan yang dimiliki.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="cardsartikel">
+          {/* <div
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-easing="linear"
             className="lp-cardartikel"
           >
-            <img
-              src="https://images.unsplash.com/photo-1642000387873-145c73177207?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGZpbmFuY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt="article 1"
-              className="lp-thumbnail-artikel"
-            />
+            <img src="" alt="article 1" className="lp-thumbnail-artikel" />
             <div className="lp-contentartikel">
               <p className="lp-judulartikel">
                 Cara Kelola Keuangan Saat Terjadi Resesi, Ada Rahasianya
@@ -291,7 +385,7 @@ const Home = () => {
                 keinginan.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
