@@ -7,6 +7,13 @@ import fr from "./img/fr.png";
 import cardartikel from "./img/cardartikel.png";
 import AOS from "aos";
 import { NavLink, useNavigate } from "react-router-dom";
+import {
+  BsBook,
+  BsClock,
+  BsAward,
+  BsFilm,
+  BsArrowRightCircle,
+} from "react-icons/bs";
 import axios from "axios";
 
 const Home = () => {
@@ -128,7 +135,7 @@ const Home = () => {
           <div className="lp-coursejudul">
             <p className="lp-judulcontent">Financial Course Preview</p>
             <NavLink className="lp-more" to="/fc">
-              Read more <i class="bi bi-arrow-right-circle mx-2"></i>
+              Read more <BsArrowRightCircle style={{ marginLeft: "10px" }} />
             </NavLink>
           </div>
         </div>
@@ -155,16 +162,27 @@ const Home = () => {
                   </div>
                   <div className="lp-deskripsicourse">
                     <div className="lp-deskripsicourseitem">
-                      <p><i class="bi bi-clock"></i> {user.duration}</p>
+                      <p>
+                        <BsClock style={{ marginRight: "10px" }} />
+                        {user.duration}
+                      </p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p><i class="bi bi-book"></i> {user.kategori}</p>
+                      <p>
+                        <BsBook style={{ marginRight: "10px" }} />
+                        {user.kategori}
+                      </p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p><i class="bi bi-award"></i> {user.level}s</p>
+                      <p>
+                        <BsAward style={{ marginRight: "10px" }} />
+                        {user.level}
+                      </p>
                     </div>
                     <div className="lp-deskripsicourseitem">
-                      <p><i class="bi bi-film"></i> {user.video}</p>
+                      <p>
+                        <BsFilm style={{ marginRight: "5px" }} /> {user.video}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -179,7 +197,7 @@ const Home = () => {
           <div className="lp-coursejudul">
             <p className="lp-judulcontent">Financial Artikel Preview</p>
             <NavLink className="lp-more" to="/fa">
-              Read more <i class="bi bi-arrow-right-circle mx-2"></i>
+              Read more <BsArrowRightCircle style={{ marginLeft: "10px" }} />
             </NavLink>
           </div>
         </div>
@@ -190,12 +208,19 @@ const Home = () => {
             data-aos-easing="linear"
             className="lp-cardartikel"
           >
-            <img src={cardartikel} alt="" />
-            <div className="lp-deskripsiartikel">
-              <p className="lp-judulartikel">Lorem Ipsum is simply</p>
+            <img
+              src="https://images.unsplash.com/photo-1642000387873-145c73177207?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGZpbmFuY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              alt="article 1"
+              className="lp-thumbnail-artikel"
+            />
+            <div className="lp-contentartikel">
+              <p className="lp-judulartikel">
+                Cara Kelola Keuangan Saat Terjadi Resesi, Ada Rahasianya
+              </p>
               <p className="lp-deskripsiartikel">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry...
+                Apa yang menjadi 'ketakutan' Presiden Joko Widodo (Jokowi)
+                menjadi kenyataan. Suka tidak suka, Badai besar yang berasal
+                dari dinamika perekonomian global akhirnya datang.
               </p>
             </div>
           </div>
@@ -205,12 +230,21 @@ const Home = () => {
             data-aos-easing="linear"
             className="lp-cardartikel"
           >
-            <img src={cardartikel} alt="" />
-            <div className="lp-deskripsiartikel">
-              <p className="lp-judulartikel">Lorem Ipsum is simply</p>
+            <img
+              src="https://images.unsplash.com/photo-1644871912804-b69477a8a8a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGZpbmFuY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              alt="article 2"
+              className="lp-thumbnail-artikel"
+            />
+            <div className="lp-contentartikel">
+              <p className="lp-judulartikel">
+                Cara Cermat Mencapai Financial Freedom
+              </p>
               <p className="lp-deskripsiartikel">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry...
+                Untuk mencapai kondisi financial freedom tentunya tidak mudah,
+                terlebih jika tidak diiringi dengan persiapan dan perencanaan
+                yang matang serta gaya hidup hemat. Diperlukan komitmen serta
+                kedisiplinan yang tinggi dalam mengelola keuangan sejak muda.
+                Kita juga harus lebih bijaksana dalam melakukan pengeluaran.
               </p>
             </div>
           </div>
@@ -220,12 +254,19 @@ const Home = () => {
             data-aos-easing="linear"
             className="lp-cardartikel"
           >
-            <img src={cardartikel} alt="" />
-            <div className="lp-deskripsiartikel">
-              <p className="lp-judulartikel">Lorem Ipsum is simply</p>
+            <img
+              src="https://images.unsplash.com/photo-1645731504293-ad4d5da42a10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZpbmFuY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              alt="article 3"
+              className="lp-thumbnail-artikel"
+            />
+            <div className="lp-contentartikel">
+              <p className="lp-judulartikel">
+                Pentingnya Manajemen Keuangan dalam Kehidupan Sehari-Hari.
+              </p>
               <p className="lp-deskripsiartikel">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry...
+                Dengan adanya manajemen keuangan maka keuangan seseorang,
+                perusahaan, maupun organisasi akan lebih jelas pengeluaran
+                maupun pendapatan yang dimiliki.
               </p>
             </div>
           </div>
@@ -235,12 +276,19 @@ const Home = () => {
             data-aos-easing="linear"
             className="lp-cardartikel"
           >
-            <img src={cardartikel} alt="" />
-            <div className="lp-deskripsiartikel">
-              <p className="lp-judulartikel">Lorem Ipsum is simply</p>
+            <img
+              src="https://images.unsplash.com/photo-1631514623720-7f0996f87b75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmluYW5jZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="article 4"
+              className="lp-thumbnail-artikel"
+            />
+            <div className="lp-contentartikel">
+              <p className="lp-judulartikel">
+                Cara Kelola Keuangan Saat Terjadi Resesi, Ada Rahasianya
+              </p>
               <p className="lp-deskripsiartikel">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry...
+                Seiring bertambahnya usia juga mengharuskan kita dapat lebih
+                pintar memilih mana yang menjadi kebutuhan ataupun hanya sekadar
+                keinginan.
               </p>
             </div>
           </div>

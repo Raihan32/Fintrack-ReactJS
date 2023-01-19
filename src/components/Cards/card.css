@@ -4,6 +4,7 @@
   border-radius: 8px;
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .card-container {
@@ -55,7 +56,6 @@
   font-style: normal;
   color: #555658;
   height: 4.5rem;
-  /* border: 1px solid black; */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
