@@ -48,7 +48,7 @@
 }
 
 .profile-nama {
-  width: 131px;
+  width: 191px;
   height: 24px;
 
   font-family: "Poppins";
@@ -56,8 +56,9 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  margin-left: 100px;
-
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
   color: #030842;
 
   /* Inside auto layout */
