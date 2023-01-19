@@ -60,7 +60,7 @@ const Register = () => {
               className="fw-normal mb-3 ps-5 pb-3"
               style={{ letterSpacing: "1px" }}
             >
-              Sing Up
+              Sign Up
             </h3>
             <form onSubmit={Register}>
               <p>{msg}</p>
@@ -119,9 +119,9 @@ const Register = () => {
             alt="Login image"
             style={{
               objectFit: "cover",
-              objectPosition: "left",
-              height: "550px",
-              width: "550px",
+              objectPosition: "left",marginTop : "75px",
+              height: "450px",
+              width: "530px",
             }}
           />
         </MDBCol>

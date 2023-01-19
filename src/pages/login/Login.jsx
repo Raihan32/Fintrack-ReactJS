@@ -114,7 +114,7 @@ const Login = () => {
                 className="btn btn-info mb-4 px-5 mx-5 w-100"
                 color="info"
               >
-                Daftar
+                Login
               </button>
             </form>
             <p className="ms-5">

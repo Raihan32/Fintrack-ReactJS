@@ -158,7 +158,8 @@
   align-items: center;
   padding: 0px;
   gap: 38px;
-  width: 1286px;
+  
+  width: 1440px;
   height: 447px;
   margin-top: 148px;
 }
@@ -179,19 +180,20 @@
   padding: 0px;
   isolation: isolate;
   background-color: #030842;
-  width: 1186px;
+  width: 100%;
   border-radius: 40px 40px;
   height: 350px;
 }
 .lp-courseisi {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 0px;
-  gap: 35px;
-  width: 1185px;
+  justify-content: space-between;
+  width: 100%;
   height: 350px;
   cursor: pointer;
+  
 }
 
 .lp-thubmnail {
