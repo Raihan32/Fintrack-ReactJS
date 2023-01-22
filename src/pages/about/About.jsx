@@ -6,6 +6,9 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import "./about.css";
+import infiniteLearning from "../../assets/infiniteLearning.png";
+import cover1 from "../../assets/Cover.png";
+import VideoPlayer from "../../components/playlist/videoPlayer";
 
 const About = () => {
   return (
@@ -30,38 +33,75 @@ const About = () => {
       <div
         className="d-flex flex-column mx-auto"
         style={{
-          maxWidth: "40rem",
+          maxWidth: "50rem",
           textAlign: "justify",
         }}
       >
         <div className="text-black mx-5">
           <h1 className="text-center mb-4">Our Stroy</h1>
           <p>
-            <span className="baris-kahiji">F</span>inancial tracker is a
+            <span className="baris-kahiji">A</span>financial tracker is a
             powerful platform for monitoring your finances. We want to empower
             millions of customers around the world to start and change their
-            personal finances with money management technology, accompanied by
-            learning media about the world of finance through the latest
-            articles and video courses.
+            finances with money management technology, accompanied by learning
+            media about the world of finance through the latest articles and
+            video courses.
           </p>
         </div>
         <div className="text-black mx-5">
           <h3 className="font-weight-bold">Founder Stroy</h3>
+          <p>
+            Research on Indonesia's financial problems is predicted by the OECD
+            to become one of the largest holders of the economy in 2045 but this
+            year 2023 Indonesia is still haunted by a global recession that will
+            occur in which there will be a slowdown in the circulation of money.
+            This is due to low literacy regarding finance in Indonesia
+          </p>
+          <p>
+            Minister of Finance Sri Mulyani Indrawati to the World Bank predicts
+            that the global economy will sink into a recession in 2023. This
+            happened due to monetary tightening in a number of countries, to
+            geopolitical conflicts which caused fluctuations in world food and
+            energy commodity prices.
+          </p>
+          <div className="mt-2">
+            {/* <h3 className="font-weight-bold">
+              Showcase video promotion Fintrack
+            </h3> */}
+            <VideoPlayer url={"https://youtu.be/ASg7F886slE"} light={cover1} />
+          </div>
           <p>
             There are still many Indonesian people who find it difficult to
             manage finances in the short and long term. Even though managing
             finances properly is very important, which can help identify
             financial mistakes and also make it possible to make investments.
             The solution to the problem of managing finances is to start with
-            making a financial report, prepare a financial reserve, make sure
-            you have spare money.
+            making a financial report, preparing a financial reserve, and making
+            sure you have spare money.
+          </p>
+          <p>
+            Fintrack exists to educate about finance, how to invest, provide
+            training or courses as well as how to manage finances On this
+            website, not only provide courses and articles about financial
+            knowledge, but there are also features for managing finances that
+            can manage income and expenses
           </p>
         </div>
+
+        {/* <div className="text-black mx-5">
+          <h3 className="font-weight-bold">Stroy</h3>
+          <p></p>
+        </div>
         <img
-          className="img-fluid rounded mt-3"
-          src="https://media.licdn.com/dms/image/C560BAQEX1pFURxwK_g/company-logo_200_200/0/1640263808897?e=1681948800&v=beta&t=zjL1ybxJ4Mx835KaPeZFly_9t_TfB6ilgTrcwB844pQ"
+          className="img-fluid rounded mt-2 mb-4"
+          style={{
+            height: "400px",
+            objectFit: "cover",
+            border: "1px solid black",
+          }}
+          src={infiniteLearning}
           alt="logo infinite learning"
-        />
+        /> */}
       </div>
       <div className="container-xxl py-5">
         <div className="container">
@@ -114,11 +154,11 @@ const About = () => {
                   alt="user2"
                 />
                 <div className="text-center p-4">
-                  <h5>Tasya Takhayaza</h5>
+                  <h5>Tasya Takhayaza Yudistia </h5>
                   <span>Hipster or Designer</span>
                 </div>
                 <div className="team-text text-center bg-white p-4">
-                  <h5>Tasya Takhayaza</h5>
+                  <h5>Tasya Takhayaza Yudistia</h5>
                   <p>Hipster or Designer</p>
                   <div className="d-flex justify-content-center">
                     <a

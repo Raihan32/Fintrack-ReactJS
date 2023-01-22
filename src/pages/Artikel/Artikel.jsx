@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./artikel.css";
 import hero from "./img/hero.png";
 import card from "./img/card.png";
-import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { BsArrowRightCircle } from "react-icons/bs";
+import axios from "axios";
 
 const Artikel = () => {
+  const navigate = useNavigate();
+
+  const [artikels, setArtikels] = useState([]);
+
+  async function DataArtikels() {
+    try {
+      const response = await axios.get(
+        "https://apigenerator.dronahq.com/api/jq3eOc4d/artikeldata"
+      );
+      setArtikels(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    DataArtikels();
+  }, []);
+
   return (
     <div>
       <div className="artikel">
@@ -39,65 +60,32 @@ const Artikel = () => {
             </div>
           </div>
         </div>
+        <h1>All Articles</h1>
         <div className="isiartikel">
-          <NavLink style={{ textDecoration: "none" }} to="/isiartikel">
-            <div className="cardsartikel">
-              <img src={card} />
-              <div className="cardisiartikel">
-                <p className="cardisiartikeljudul">
-                  Cara Cermat Mencapai Financial Freedom
-                </p>{" "}
-                <p>
-                  Kebebasan finansial, atau financial freedom, sering menjadi
-                  bahan perbincangan karena hal ini merupakan impian dari banyak
-                  orang.
-                </p>
-                <p>readmore</p>
+          {artikels.slice().map((artikel) => {
+            return (
+              <div
+                className="cardsartikel"
+                key={artikel.id}
+                // onClick={() => {
+                //   navigate(`/fa/${artikel.id}`);
+                // }}
+              >
+                <img
+                  className="thumbnail-artikel"
+                  src={artikel.image}
+                  alt={artikel.heading}
+                />
+                <div className="cardisiartikel">
+                  <p className="cardisiartikeljudul">{artikel.heading}</p>
+                  <p>{artikel.description}</p>
+                  <Link className="linkisiartikel" to={`/fa/${artikel.id}`}>
+                    Read more <BsArrowRightCircle />
+                  </Link>
+                </div>
               </div>
-            </div>
-          </NavLink>
-          <div className="cardsartikel">
-            <img src={card} />
-            <div className="cardisiartikel">
-              <p className="cardisiartikeljudul">
-                Cara Cermat Mencapai Financial Freedom
-              </p>{" "}
-              <p>
-                Kebebasan finansial, atau financial freedom, sering menjadi
-                bahan perbincangan karena hal ini merupakan impian dari banyak
-                orang.
-              </p>
-              <p>readmore</p>
-            </div>
-          </div>
-          <div className="cardsartikel">
-            <img src={card} />
-            <div className="cardisiartikel">
-              <p className="cardisiartikeljudul">
-                Cara Cermat Mencapai Financial Freedom
-              </p>{" "}
-              <p>
-                Kebebasan finansial, atau financial freedom, sering menjadi
-                bahan perbincangan karena hal ini merupakan impian dari banyak
-                orang.
-              </p>
-              <p>readmore</p>
-            </div>
-          </div>
-          <div className="cardsartikel">
-            <img src={card} />
-            <div className="cardisiartikel">
-              <p className="cardisiartikeljudul">
-                Cara Cermat Mencapai Financial Freedom
-              </p>{" "}
-              <p>
-                Kebebasan finansial, atau financial freedom, sering menjadi
-                bahan perbincangan karena hal ini merupakan impian dari banyak
-                orang.
-              </p>
-              <p>readmore</p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>

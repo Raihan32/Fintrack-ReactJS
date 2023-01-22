@@ -23,9 +23,9 @@ function App() {
         <Route path="/fr" element={<Record />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/fa" element={<Artikel />} />
+        <Route exact path="/fa" element={<Artikel />} />
+        <Route path="/fa/:artikelId" element={<Isiartikel />} />
         <Route path="/lesson" element={<Lesson />} />
-        <Route path="/isiartikel" element={<Isiartikel />} />
         <Route exact path="/fc" element={<Course />} />
         <Route path="/fc/:id" element={<CourseDetail />} />
         <Route path="/privacyolicy" element={<Privacyolicy />} />

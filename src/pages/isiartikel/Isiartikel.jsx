@@ -1,30 +1,54 @@
-import React from 'react';
-import Cover from '../isiartikel/img/coverisi.png';
-import './isiartikel.css';
+import React from "react";
+import { useParams } from "react-router";
+import Cover from "../isiartikel/img/coverisi.png";
+import "./isiartikel.css";
 
 const Isiartikel = () => {
+  const navigate = useNavigate();
+  const { artikelId } = useParams();
+  const artikel = artikels.find((artikel) => artikel.id === artikelId);
+
+  const {
+    image,
+    heading,
+    description,
+    content_description,
+    title_description,
+  } = artikel;
+
+  const [artikels, setArtikels] = useState([]);
+
+  async function DataArtikels() {
+    try {
+      const response = await axios.get(
+        "https://apigenerator.dronahq.com/api/jq3eOc4d/artikeldata"
+      );
+      setArtikels(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    DataArtikels();
+  }, []);
+
   return (
-    <div className='container'>
+    <div>
       <div className="coverisiartikel">
-        <img src={Cover} alt="Cover" className="coverisi"></img>
+        <img src={Cover} alt="Cover" className="isiartikel-coverisi" />
       </div>
+
       <div className="artikeldes">
-        <div className="des">
-          <p>Cara Cermat Mencapai Financial Freedom</p>
-          <div className="desc">
-            <p>
-              Kebebasan finansial, atau financial freedom, sering menjadi bahan perbincangan karena hal ini merupakan impian dari banyak orang. Namun apa sebetulnya yang dimaksud dengan hal tersebut? Pada dasarnya, financial freedom adalah
-              sebuah kondisi di mana kita dapat mengambil berbagai keputusan (untuk pengeluaran) tanpa harus mengkhawatirkan keadaan keuangan kita. Untuk mencapai kondisi financial freedom tentunya tidak mudah, terlebih jika tidak diiringi
-              dengan persiapan dan perencanaan yang matang serta gaya hidup hemat. Diperlukan komitmen serta kedisiplinan yang tinggi dalam mengelola keuangan sejak muda. Kita juga harus lebih bijaksana dalam melakukan pengeluaran.
-            </p>
+        <div className="isiartikel-des">
+          <p>{heading}</p>
+          <div className="isiartikel-desc">
+            <p>{description}</p>
           </div>
-          <div className="des1">
-            <p> Apa yang Bisa Kita Lakukan Agar Lebih Disiplin Dalam Mengelola Keuangan?</p>
-            <div className="desc">
-              <p>
-                pahami kondisi keuangan kita terlebih dahulu. Pada dasarnya, financial freedom tidak diukur dari seberapa besar penghasilan kita, melainkan bagaimana besaran penghasilan tersebut dapat mencukupi segala kebutuhan dan
-                keinginan, tanpa harus mengganggu dana simpanan yang kita miliki.
-              </p>
+          <div className="isiartikel-des1">
+            <p>{content_description}</p>
+            <div className="isiartikel-desc">
+              <p>{title_description}</p>
             </div>
           </div>
         </div>
