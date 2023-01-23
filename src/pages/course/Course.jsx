@@ -68,7 +68,7 @@ const Course = () => {
   //akhir pagination
 
   return (
-    <Container fluid className="content">
+    <Container className="content">
       <Helmet>
         <title>Fintrack | Finacial Course</title>
       </Helmet>

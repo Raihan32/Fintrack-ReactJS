@@ -75,9 +75,9 @@ const Navbar = () => {
                 <button className="tombollogin m-2">Login</button>
               </NavLink>
             </li>
-            <li className="nav-item profile">
-              <NavLink className="nav-link" to="/profile">
-                <p className="item animasi-left-right">{name}</p>
+            <li>
+              <NavLink className="name" to="/profile">
+                <p className=" item animasi-left-right">{name}</p>
               </NavLink>
             </li>
             <li>

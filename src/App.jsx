@@ -18,6 +18,7 @@ import Error from "./pages/noFoundPage/Error";
 function App() {
   return (
     <>
+      
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />

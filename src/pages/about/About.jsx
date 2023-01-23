@@ -10,6 +10,9 @@ import "./about.css";
 import infiniteLearning from "../../assets/infiniteLearning.png";
 import cover1 from "../../assets/Cover.png";
 import VideoPlayer from "../../components/playlist/videoPlayer";
+import raihan from "./img/raihan.jpg"
+import dafa from "./img/dafa.png"
+
 
 const About = () => {
   return (
@@ -296,11 +299,12 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                  alt="user6"
+                  style={{height:"300px", width:"300px"}}
+                  src={raihan}
+                  alt="Raihan"
                 />
-                <div className="text-center p-4">
-                  <h5>Raihan Fathurrahman</h5>
+                <div className="text-center p-4 ">
+                  <h5>Raihan Fathurrahman </h5>
                   <span>Hacker or Coder</span>
                 </div>
                 <div className="team-text text-center bg-white p-4">
@@ -341,10 +345,11 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
+              <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt="user4"
+                  style={{height:"300px", width:"300px"}}
+                  src={dafa}
+                  alt="dafa"
                 />
                 <div className="text-center p-4">
                   <h5>Dafa Huda Rifa'i</h5>
