@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import axios from "axios";
 import { Container, Breadcrumb } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 // import { First } from "react-bootstrap/esm/PageItem";
 
 import Search from "../../components/filter/Search";
@@ -68,6 +69,9 @@ const Course = () => {
 
   return (
     <Container fluid className="content">
+      <Helmet>
+        <title>Fintrack | Finacial Course</title>
+      </Helmet>
       <div className="filter">
         <Breadcrumb breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>

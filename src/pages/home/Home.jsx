@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./home.css";
 import hero from "./img/hero.png";
 import fc from "./img/financialcourse.png";
@@ -53,6 +54,9 @@ const Home = () => {
 
   return (
     <div className="lp-kontainer">
+      <Helmet>
+        <title>Fintrack</title>
+      </Helmet>
       <div className="lp-hero">
         <div className="lp-textcontainer">
           <div

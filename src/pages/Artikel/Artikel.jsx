@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./artikel.css";
 import hero from "./img/hero.png";
 import card from "./img/card.png";
@@ -28,6 +29,10 @@ const Artikel = () => {
 
   return (
     <div>
+      {" "}
+      <Helmet>
+        <title>Fintrack | Finacial Article</title>
+      </Helmet>
       <div className="artikel">
         <div className="heroartikel">
           <div className="gambarheroartikel">

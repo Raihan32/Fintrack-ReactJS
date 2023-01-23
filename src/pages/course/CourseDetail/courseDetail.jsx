@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link, useNavigate, useParams, Outlet } from "react-router-dom";
 import { Breadcrumb, Container } from "react-bootstrap";
 import Detail from "../../../constants/DetailCourse";
@@ -10,6 +11,9 @@ const CourseDetail = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Fintrack | Course</title>
+      </Helmet>
       <div className="course-detail-container">
         <div className="course-detail-area1">
           {" "}

@@ -1,34 +1,6 @@
-// import React from 'react'
-// import Button from 'react-bootstrap/Button';
-// import Form from 'react-bootstrap/Form';
-
-// function Login() {
-//   return (
-//     <Form>
-//       <Form.Group className="mb-3" controlId="formBasicEmail">
-//         <Form.Label>Email address</Form.Label>
-//         <Form.Control type="email" placeholder="Enter email" />
-//         <Form.Text className="text-muted">
-//           We'll never share your email with anyone else.
-//         </Form.Text>
-//       </Form.Group>
-//       <Form.Group className="mb-3" controlId="formBasicPassword">
-//         <Form.Label>Password</Form.Label>
-//         <Form.Control type="password" placeholder="Password" />
-//       </Form.Group>
-//       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-//         <Form.Check type="checkbox" label="Check me out" />
-//       </Form.Group>
-//       <Button variant="primary" type="submit">
-//         Submit
-//       </Button>
-//     </Form>
-//   );
-// }
-
-// export default Login;
 import React, { useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import {
   MDBBtn,
@@ -58,10 +30,9 @@ const Login = () => {
       await axios.post("http://localhost:5000/login", {
         email: email,
         password: password,
-        
       });
-      
-      navigate("/", {replace: true});
+
+      navigate("/", { replace: true });
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -70,6 +41,9 @@ const Login = () => {
   };
   return (
     <MDBContainer>
+      <Helmet>
+        <title>Fintrack | LogIn</title>
+      </Helmet>
       <MDBRow>
         <MDBCol sm="6">
           <div className="d-flex flex-row ps-5 pt-5 ">

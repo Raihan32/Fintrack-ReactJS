@@ -1,12 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import Cover from "../isiartikel/img/coverisi.png";
 import "./isiartikel.css";
 
 const Isiartikel = () => {
   const navigate = useNavigate();
-  const { artikelId } = useParams();
-  const artikel = artikels.find((artikel) => artikel.id === artikelId);
+  const { id } = useParams();
+  const artikel = artikels.find((artikel) => artikel.id === id);
 
   const {
     image,
@@ -35,6 +36,9 @@ const Isiartikel = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fintrack | Artikel</title>
+      </Helmet>
       <div className="coverisiartikel">
         <img src={Cover} alt="Cover" className="isiartikel-coverisi" />
       </div>

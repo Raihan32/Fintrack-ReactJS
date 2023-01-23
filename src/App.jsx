@@ -24,7 +24,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route exact path="/fa" element={<Artikel />} />
-        <Route path="/fa/:artikelId" element={<Isiartikel />} />
+        <Route path="/fa/:id" element={<Isiartikel />} />
         <Route path="/lesson" element={<Lesson />} />
         <Route exact path="/fc" element={<Course />} />
         <Route path="/fc/:id" element={<CourseDetail />} />

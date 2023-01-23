@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   FaFacebookF,
   FaTwitter,
@@ -13,6 +14,9 @@ import VideoPlayer from "../../components/playlist/videoPlayer";
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>Fintrack | About</title>
+      </Helmet>
       <div className="text container-fluid mb-5">
         <div
           className="d-flex flex-column align-items-center justify-content-center"

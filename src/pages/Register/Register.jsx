@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -45,6 +46,9 @@ const Register = () => {
   };
   return (
     <MDBContainer>
+      <Helmet>
+        <title>Fintrack | SignUp</title>
+      </Helmet>
       <MDBRow>
         <MDBCol sm="6">
           <div className="d-flex flex-row ps-5 pt-5 ">
@@ -119,7 +123,8 @@ const Register = () => {
             alt="Login image"
             style={{
               objectFit: "cover",
-              objectPosition: "left",marginTop : "75px",
+              objectPosition: "left",
+              marginTop: "75px",
               height: "450px",
               width: "530px",
             }}
