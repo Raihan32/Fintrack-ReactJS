@@ -16,7 +16,7 @@ const Cards = ({ menuItem, query }) => {
         })
         .map((item) => (
           <Card
-          data-aos="zoom-in"  
+            data-aos="zoom-in"
             key={item.id}
             className="card"
             onClick={() => {
@@ -30,14 +30,14 @@ const Cards = ({ menuItem, query }) => {
               alt={item.heading}
               className="card-thumbnail"
             />
-            <div  className="card-container">
+            <div className="card-container">
               <p className="card-information">
-                {item.id} | {item.duration} | {item.video} | {item.kategori}
+                <span>{item.duration} </span>|<span> {item.video}</span>
               </p>
               <h5 className="card-title">{item.heading}</h5>
               <p className="card-deskripsi">{item.description}</p>
               <span className="card-type">
-                <FaRegFolderOpen size={21} style={{ color: "#8F97F9" }} />
+                <FaRegFolderOpen size={22} />
                 {item.kategori}
               </span>
             </div>

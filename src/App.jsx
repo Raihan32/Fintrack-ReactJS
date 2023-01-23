@@ -13,6 +13,7 @@ import Register from "./pages/Register/Register";
 import Privacyolicy from "./pages/PrivacyPolicy/Privacyolicy";
 import About from "./pages/about/About";
 import Profile from "./components/Profile/Cardprofile";
+import Error from "./pages/noFoundPage/Error";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/privacyolicy" element={<Privacyolicy />} />
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </>

@@ -29,7 +29,6 @@ const Artikel = () => {
 
   return (
     <div>
-      {" "}
       <Helmet>
         <title>Fintrack | Finacial Article</title>
       </Helmet>

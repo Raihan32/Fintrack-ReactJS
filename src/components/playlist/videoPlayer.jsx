@@ -9,6 +9,7 @@ const videoPlayer = ({ url, light }) => {
         className="react-player"
         playing
         width="100%"
+        height="100%"
         url={url}
         light={light}
         controls={true}

@@ -3,8 +3,14 @@ import { NavLink } from "react-router-dom";
 import "./footer.css";
 import logoputih from "./img/logoputih.png";
 import sosmed from "./img/sosmed.png";
+import { RxTwitterLogo } from "react-icons/rx";
+import { BsInstagram } from "react-icons/bs";
+import { FiYoutube } from "react-icons/fi";
+import { AiOutlineFacebook } from "react-icons/ai";
 
 const Footer = () => {
+  // dyanmic year
+  const year = new Date().getFullYear();
   return (
     <div>
       <div className="kaki">
@@ -16,7 +22,21 @@ const Footer = () => {
                 <p className="logodes">
                   Designed and Developed by Hustler Team
                 </p>
-                <img src={sosmed} alt="" />
+                {/* <img src={sosmed} alt="" /> */}
+                <div className="footer-icons">
+                  <div class="ig">
+                    <BsInstagram size={44} />
+                  </div>
+                  <div class="youtube">
+                    <FiYoutube size={44} />
+                  </div>
+                  <div class="facebook">
+                    <AiOutlineFacebook size={44} />
+                  </div>
+                  <div class="twitter">
+                    <RxTwitterLogo size={44} />
+                  </div>
+                </div>
               </div>
               <div className="desplat">
                 <p className="textfooter">
@@ -30,7 +50,10 @@ const Footer = () => {
       </div>
       <div className="barfooter">
         <div className="container m-2">
-          <p>© 2023 Financial Tracking Co., Ltd. All rights reserved.</p>
+          <p>
+            © <span>{year} </span>
+            Financial Tracking Co., Ltd. All rights reserved.
+          </p>
         </div>
         <div className="about">
           <NavLink
