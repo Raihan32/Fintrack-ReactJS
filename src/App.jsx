@@ -14,6 +14,7 @@ import Privacyolicy from "./pages/PrivacyPolicy/Privacyolicy";
 import About from "./pages/about/About";
 import Profile from "./components/Profile/Cardprofile";
 import Error from "./pages/noFoundPage/Error";
+import { useCookies } from "react-cookie";
 
 function App() {
   return (
