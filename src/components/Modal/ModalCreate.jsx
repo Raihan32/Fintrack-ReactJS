@@ -82,7 +82,7 @@ class ModalCreate extends React.Component {
             />
             </div>
             <div className="mb-3">
-            <label  className="form-label">Tabggal</label>
+            <label  className="form-label">Tanggal</label>
             <input 
             type="date" 
             className="form-control" 
