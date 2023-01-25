@@ -5,6 +5,8 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
+  FaGithub
+  ,
 } from "react-icons/fa";
 import "./about.css";
 import infiniteLearning from "../../assets/infiniteLearning.png";
@@ -15,6 +17,7 @@ import dafa from "./img/dafa.jpeg"
 import hapis from "./img/hapis.jpeg"
 import tasya from "./img/tasya.jpg"
 import alfi from "./img/alfi.jpeg"
+import dwi from "./img/dwi.jpeg"
 
 
 
@@ -143,7 +146,7 @@ const About = () => {
                     <a className="btn btn-square btn-light m-1" href="/">
                       <FaFacebookF />
                     </a>
-                    <a className="btn btn-square btn-light m-1" href="/">
+                    <a className="btn btn-square btn-light m-1" href="https://www.instagram.com/alfshrl/?hl=id">
                       <FaInstagram />
                     </a>
                     <a
@@ -256,7 +259,7 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1519625594242-7db544018926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                  src={dwi}
                   alt="user5"
                 />
                 <div className="text-center p-4">
@@ -283,7 +286,7 @@ const About = () => {
                     </a>
                     <a
                       className="btn btn-square btn-light m-1"
-                      href="/"
+                      href="https://www.instagram.com/dwaryni/?hl=id"
                       target="_blank"
                     >
                       <FaInstagram />
@@ -314,23 +317,17 @@ const About = () => {
                   <h5>Raihan Fathurrahman</h5>
                   <p>Hacker or Coder</p>
                   <div className="d-flex justify-content-center">
-                    <a
+                  <a
                       className="btn btn-square btn-light m-1"
-                      href="/"
+                      href="https://github.com/Raihan32"
                       target="_blank"
                     >
-                      <FaTwitter />
+                      <FaGithub />
                     </a>
+                 
                     <a
                       className="btn btn-square btn-light m-1"
-                      href="/"
-                      target="_blank"
-                    >
-                      <FaFacebookF />
-                    </a>
-                    <a
-                      className="btn btn-square btn-light m-1"
-                      href="/"
+                      href="https://www.instagram.com/raiihan.rar/?hl=id"
                       target="_blank"
                     >
                       <FaInstagram />
@@ -377,7 +374,7 @@ const About = () => {
                     </a>
                     <a
                       className="btn btn-square btn-light m-1"
-                      href="/"
+                      href="https://www.instagram.com/dafa.h.r/?hl=id"
                       target="_blank"
                     >
                       <FaInstagram />
