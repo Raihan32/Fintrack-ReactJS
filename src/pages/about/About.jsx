@@ -11,7 +11,11 @@ import infiniteLearning from "../../assets/infiniteLearning.png";
 import cover1 from "../../assets/Cover.png";
 import VideoPlayer from "../../components/playlist/videoPlayer";
 import raihan from "./img/raihan.jpg"
-import dafa from "./img/dafa.png"
+import dafa from "./img/dafa.jpeg"
+import hapis from "./img/hapis.jpeg"
+import tasya from "./img/tasya.jpg"
+import alfi from "./img/alfi.jpeg"
+
 
 
 const About = () => {
@@ -122,7 +126,7 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  src={alfi}
                   alt="user1"
                 />
                 <div className="text-center p-4">
@@ -157,7 +161,7 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src={tasya}
                   alt="user2"
                 />
                 <div className="text-center p-4">
@@ -204,7 +208,7 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  src="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                  src={hapis}
                   alt="user3"
                 />
                 <div className="text-center p-4">
@@ -299,7 +303,6 @@ const About = () => {
               <div className="team-item rounded">
                 <img
                   className="img-fluid"
-                  style={{height:"300px", width:"300px"}}
                   src={raihan}
                   alt="Raihan"
                 />
@@ -347,7 +350,6 @@ const About = () => {
               <div className="team-item rounded">
               <img
                   className="img-fluid"
-                  style={{height:"300px", width:"300px"}}
                   src={dafa}
                   alt="dafa"
                 />

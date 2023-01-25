@@ -62,6 +62,7 @@ class ModalCreate extends React.Component {
             <div className="mb-3">
             <label  className="form-label">Deskripsi</label>
             <input 
+            autoComplete="off"
             type="text" 
             className="form-control" 
             placeholder="Masukan Deskirpsi" 
