@@ -4,9 +4,7 @@ import jwtDecode from "jwt-decode";
 import "./navbar.css";
 import logo from "./img/logofin.png";
 import { useNavigate, NavLink } from "react-router-dom";
-import Cookies from 'js-cookie';
-
-
+import Cookies from "js-cookie";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,9 +12,8 @@ const Navbar = () => {
   const [token, setToken] = useState("");
   const [isLogin, SetIsLogin] = useState(true);
 
-  
   useEffect(() => {
-    const token = localStorage.getItem('refreshToken');
+    const token = localStorage.getItem("refreshToken");
     console.log(token);
     if (token) {
       SetIsLogin(true);
@@ -41,114 +38,113 @@ const Navbar = () => {
       setName(decoded.name);
     } catch (error) {}
   };
-  return (  
+  return (
     <>
-    
-    {isLogin ? (
+      {isLogin ? (
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container">
+            <NavLink className="navbar-brand" to="/">
+              <img src={logo} />
+            </NavLink>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse justify-content-end"
+              id="navbarNavDropdown"
+            >
+              <ul className="navbar-nav ">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/fc">
+                    <p className="item animasi-left-right">Financial Course</p>
+                  </NavLink>
+                </li>
+                <li className="nav-item ">
+                  <NavLink className="nav-link" to="/fa">
+                    <p className="item animasi-left-right">Financial Article</p>
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/fr">
+                    <p className="item animasi-left-right">Financial Record</p>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    style={{ textDecoration: "none" }}
+                    className="name"
+                    to="/profile"
+                  >
+                    <button className="tombollogin m-2">{name}</button>
+                  </NavLink>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      ) : (
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container">
+            <NavLink className="navbar-brand" to="/">
+              <img src={logo} />
+            </NavLink>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse justify-content-end"
+              id="navbarNavDropdown"
+            >
+              <ul className="navbar-nav ">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/fc">
+                    <p className="item animasi-left-right">Financial Course</p>
+                  </NavLink>
+                </li>
+                <li className="nav-item ">
+                  <NavLink className="nav-link" to="/fa">
+                    <p className="item animasi-left-right">Financial Article</p>
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/fr">
+                    <p className="item animasi-left-right">Financial Record</p>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink style={{ textDecoration: "none" }} to="/login">
+                    <button className="tombollogin m-2">Login</button>
+                  </NavLink>
+                </li>
 
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          <img src={logo} />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul className="navbar-nav ">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/fc">
-                <p className="item animasi-left-right">Finacial Course</p>
-              </NavLink>
-            </li>
-            <li className="nav-item ">
-              <NavLink className="nav-link" to="/fa">
-                <p className="item animasi-left-right">Financial Article</p>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/fr">
-                <p className="item animasi-left-right">Financial Record</p>
-              </NavLink>
-            </li> 
-            <li>
-              <NavLink style={{ textDecoration: "none" }} className="name" to="/profile">
-              <button className="tombollogin m-2">{name}</button>
-              </NavLink>
-            </li>
-            <li>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    ) : (
-
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          <img src={logo} />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul className="navbar-nav ">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/fc">
-                <p className="item animasi-left-right">Finacial Course</p>
-              </NavLink>
-            </li>
-            <li className="nav-item ">
-              <NavLink className="nav-link" to="/fa">
-                <p className="item animasi-left-right">Financial Article</p>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/fr">
-                <p className="item animasi-left-right">Financial Record</p>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink style={{ textDecoration: "none" }} to="/login">
-                <button className="tombollogin m-2">Login</button>
-              </NavLink>
-            </li>
-           
-            <li>
-              <NavLink className="name" to="/profile">
-                <p className=" item animasi-left-right">{name}</p>
-              </NavLink>
-            </li>
-            <li>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    )}
+                <li>
+                  <NavLink className="name" to="/profile">
+                    <p className=" item animasi-left-right">{name}</p>
+                  </NavLink>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      )}
     </>
   );
 };

@@ -129,7 +129,7 @@
   padding: 24px 0px 24px 12px;
   gap: 16px;
   background: #030842;
-  color: #fafafa;
+
   border-radius: 12px;
 }
 
@@ -140,9 +140,13 @@
   justify-content: space-evenly;
   height: 3rem;
   width: 400px;
+  background-color: transparent;
+  border: none;
+  color: #fafafa;
 }
 
 .title-playlist {
+  text-align: left;
   margin: auto;
   padding: 10px;
   height: 48px;

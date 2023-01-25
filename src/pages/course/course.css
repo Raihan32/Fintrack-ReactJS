@@ -5,13 +5,7 @@
   align-items: flex-start;
   padding-top: 0.5rem;
   column-gap: 0.4rem;
-  /* row-gap: 0.6rem; */
-}
-
-.title-course {
-  width: 100%;
-  font-size: 2rem;
-  text-align: center;
+  row-gap: 0.6rem;
 }
 
 .container-course {
@@ -19,7 +13,11 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  /* border: 1px solid black; */
+}
+
+.title-course {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .cards-course {
@@ -36,26 +34,6 @@
 .center {
   text-align: center;
 }
-/* .pagination a {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  color: #252629;
-  float: left;
-  margin: 0px 5px;
-  padding: 8px 16px;
-  text-decoration: none;
-  border: 1px solid #e3e3e4;
-  border-radius: 8px;
-}
-
-.pagination a.active {
-  background-color: #8f97f9;
-  color: #fafafa;
-}
-.pagination a:hover:not(.active) {
-  background-color: #f1f1f1;
-} */
 
 .pagination button {
   font-family: "Poppins";

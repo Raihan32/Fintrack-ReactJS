@@ -22,15 +22,16 @@ const Home = () => {
 
   const [users, setUsers] = useState([]);
 
-  const getDataUsers = async () => {
-    const response = await fetch(
-      "https://apigenerator.dronahq.com/api/3HxghIhe/dataku"
-    );
-    const dataku = await response.json();
-    const users = dataku.slice(0, 1);
-    setUsers(users);
-  };
-
+  async function getDataUsers() {
+    try {
+      const response = await axios.get(
+        "https://apigenerator.dronahq.com/api/3HxghIhe/dataku"
+      );
+      setUsers(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
   useEffect(() => {
     getDataUsers();
   }, []);
@@ -150,7 +151,7 @@ const Home = () => {
         </div>
 
         <div data-aos="fade-up" className="lp-cousepriview">
-          {users.map((user) => {
+          {users.slice(0, 1).map((user) => {
             return (
               <div
                 className="lp-courseisi"
@@ -218,7 +219,13 @@ const Home = () => {
         >
           {artikels.slice(0, 3).map((artikel) => {
             return (
-              <div class="lp-card-artikel" key={artikel.id}>
+              <div
+                class="lp-card-artikel"
+                key={artikel.id}
+                onClick={() => {
+                  navigate(`/fa/${artikel.id}`);
+                }}
+              >
                 <img
                   src={artikel.image}
                   class="lp-card-image"

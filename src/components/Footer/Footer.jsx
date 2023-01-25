@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./footer.css";
 import logoputih from "./img/logoputih.png";
-import sosmed from "./img/sosmed.png";
 import { RxTwitterLogo } from "react-icons/rx";
 import { BsInstagram } from "react-icons/bs";
 import { FiYoutube } from "react-icons/fi";
@@ -22,7 +21,6 @@ const Footer = () => {
                 <p className="logodes">
                   Designed and Developed by Hustler Team
                 </p>
-                {/* <img src={sosmed} alt="" /> */}
                 <div className="footer-icons">
                   <div class="ig">
                     <BsInstagram size={44} />

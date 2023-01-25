@@ -25,10 +25,11 @@ const CourseDetail = () => {
             className="course-cover-detail"
           />
         </div>
+
         <div class="fc-body-playlist">
           {" "}
           <section class="course-video-playlist">
-            <div className="list-lesson">
+            <button className="list-lesson">
               <span>
                 <FaRegPlayCircle
                   style={{
@@ -41,22 +42,8 @@ const CourseDetail = () => {
                 Penggenalan konsep audit laporan
               </span>
               <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
-              <span>
-                <FaRegPlayCircle
-                  style={{
-                    fontSize: "26px",
-                    color: "#8F97F9",
-                  }}
-                />
-              </span>
-              <span className="title-playlist">
-                Penggenalan konsep audit laporan
-              </span>
-              <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
+            </button>
+            <button className="list-lesson">
               <span>
                 <FaRegPauseCircle
                   style={{
@@ -65,13 +52,10 @@ const CourseDetail = () => {
                   }}
                 />
               </span>
-              <span className="title-playlist">
-                Dasar-dasar keuangan dengan semangat juangan dengan baik semoga
-                lekas
-              </span>
+              <span className="title-playlist">Penggenalan konsep</span>
               <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
+            </button>
+            <button className="list-lesson">
               <span>
                 <FaRegPauseCircle
                   style={{
@@ -80,12 +64,10 @@ const CourseDetail = () => {
                   }}
                 />
               </span>
-              <span className="title-playlist">
-                Penggenalan konsep audit laporan
-              </span>
+              <span className="title-playlist">Apa itu audit laporan</span>
               <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
+            </button>
+            <button className="list-lesson">
               <span>
                 <FaRegPauseCircle
                   style={{
@@ -94,10 +76,23 @@ const CourseDetail = () => {
                   }}
                 />
               </span>
-              <span className="title-playlist">Dasar-dasar keuangan</span>
+              <span className="title-playlist">laporan audit</span>
               <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
+            </button>
+            <button className="list-lesson">
+              <span>
+                <FaRegPauseCircle
+                  style={{
+                    fontSize: "26px",
+                    color: "#8F97F9",
+                  }}
+                />
+              </span>
+              <span className="title-playlist">Apa itu audit laporan?</span>
+              <span className="duration-playlist">10.43.00</span>
+            </button>
+
+            <button className="list-lesson">
               <span>
                 <FaRegPauseCircle
                   style={{
@@ -110,19 +105,7 @@ const CourseDetail = () => {
                 Penggenalan konsep audit laporan
               </span>
               <span className="duration-playlist">10.43.00</span>
-            </div>
-            <div className="list-lesson">
-              <span>
-                <FaRegPauseCircle
-                  style={{
-                    fontSize: "26px",
-                    color: "#8F97F9",
-                  }}
-                />
-              </span>
-              <span className="title-playlist">Dasar-dasar keuangan</span>
-              <span className="duration-playlist">10.43.00</span>
-            </div>
+            </button>
           </section>
         </div>
         <div class="fc-body-link">

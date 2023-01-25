@@ -286,6 +286,7 @@
   /* flex-direction: row; */
   /* justify-content: flex-start; */
   gap: 2rem;
+  cursor: pointer;
 }
 
 .lp-card-artikel {

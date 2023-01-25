@@ -5,21 +5,18 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-  FaGithub
-  ,
+  FaGithub,
 } from "react-icons/fa";
 import "./about.css";
 import infiniteLearning from "../../assets/infiniteLearning.png";
 import cover1 from "../../assets/Cover.png";
 import VideoPlayer from "../../components/playlist/videoPlayer";
-import raihan from "./img/raihan.jpg"
-import dafa from "./img/dafa.jpeg"
-import hapis from "./img/hapis.jpeg"
-import tasya from "./img/tasya.jpg"
-import alfi from "./img/alfi.jpeg"
-import dwi from "./img/dwi.jpeg"
-
-
+import raihan from "./img/raihan.jpg";
+import dafa from "./img/dafa.jpeg";
+import hapis from "./img/hapis.jpeg";
+import tasya from "./img/tasya.jpg";
+import alfi from "./img/alfi.jpeg";
+import dwi from "./img/dwi.jpeg";
 
 const About = () => {
   return (
@@ -127,11 +124,7 @@ const About = () => {
           <div className="d-flex justify-content-center row g-4">
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
-                  className="img-fluid"
-                  src={alfi}
-                  alt="user1"
-                />
+                <img className="img-fluid" src={alfi} alt="user1" />
                 <div className="text-center p-4">
                   <h5>Alfisharul Shobirin</h5>
                   <span>Project Manajement or Hustler</span>
@@ -146,7 +139,10 @@ const About = () => {
                     <a className="btn btn-square btn-light m-1" href="/">
                       <FaFacebookF />
                     </a>
-                    <a className="btn btn-square btn-light m-1" href="https://www.instagram.com/alfshrl/?hl=id">
+                    <a
+                      className="btn btn-square btn-light m-1"
+                      href="https://www.instagram.com/alfshrl/?hl=id"
+                    >
                       <FaInstagram />
                     </a>
                     <a
@@ -162,11 +158,7 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
-                  className="img-fluid"
-                  src={tasya}
-                  alt="user2"
-                />
+                <img className="img-fluid" src={tasya} alt="user2" />
                 <div className="text-center p-4">
                   <h5>Tasya Takhayaza Yudistia </h5>
                   <span>Hipster or Designer</span>
@@ -209,11 +201,7 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
-                  className="img-fluid"
-                  src={hapis}
-                  alt="user3"
-                />
+                <img className="img-fluid" src={hapis} alt="user3" />
                 <div className="text-center p-4">
                   <h5>Hafidz Dwi Nugroho</h5>
                   <span>Hipster or Designer</span>
@@ -257,11 +245,7 @@ const About = () => {
 
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
-                  className="img-fluid"
-                  src={dwi}
-                  alt="user5"
-                />
+                <img className="img-fluid" src={dwi} alt="user5" />
                 <div className="text-center p-4">
                   <h5>Dwi Aryani</h5>
                   <span>Hacker or Coder</span>
@@ -304,11 +288,7 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-                <img
-                  className="img-fluid"
-                  src={raihan}
-                  alt="Raihan"
-                />
+                <img className="img-fluid" src={raihan} alt="Raihan" />
                 <div className="text-center p-4 ">
                   <h5>Raihan Fathurrahman </h5>
                   <span>Hacker or Coder</span>
@@ -317,14 +297,20 @@ const About = () => {
                   <h5>Raihan Fathurrahman</h5>
                   <p>Hacker or Coder</p>
                   <div className="d-flex justify-content-center">
-                  <a
+                    <a
                       className="btn btn-square btn-light m-1"
                       href="https://github.com/Raihan32"
                       target="_blank"
                     >
                       <FaGithub />
                     </a>
-                 
+                    <a
+                      className="btn btn-square btn-light m-1"
+                      href="/"
+                      target="_blank"
+                    >
+                      <FaFacebookF />
+                    </a>
                     <a
                       className="btn btn-square btn-light m-1"
                       href="https://www.instagram.com/raiihan.rar/?hl=id"
@@ -345,11 +331,7 @@ const About = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="team-item rounded">
-              <img
-                  className="img-fluid"
-                  src={dafa}
-                  alt="dafa"
-                />
+                <img className="img-fluid" src={dafa} alt="dafa" />
                 <div className="text-center p-4">
                   <h5>Dafa Huda Rifa'i</h5>
                   <span>Hacker or Coder</span>
@@ -360,10 +342,10 @@ const About = () => {
                   <div className="d-flex justify-content-center">
                     <a
                       className="btn btn-square btn-light m-1"
-                      href="/"
+                      href="https://github.com/dafahuda"
                       target="_blank"
                     >
-                      <FaTwitter />
+                      <FaGithub />
                     </a>
                     <a
                       className="btn btn-square btn-light m-1"
