@@ -57,7 +57,6 @@ const Cardprofile = () => {
       >
         <div className="profile-card">
           <img className="profile-pict" src={Profile} />
-          <div className="profile-nama"><p>{name}</p></div>
           <div className="profile-cardprofile">
             <div className="profile-profile">Profile</div>
             <div className="profile-record">Record</div>

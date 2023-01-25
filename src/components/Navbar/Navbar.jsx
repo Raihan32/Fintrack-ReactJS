@@ -3,26 +3,26 @@ import axios from "axios";
 import jwtDecode from "jwt-decode";
 import "./navbar.css";
 import logo from "./img/logofin.png";
-import { useNavigate, NavLink, Route, Router } from "react-router-dom";
-import { Cookies } from 'react-cookie';
+import { useNavigate, NavLink } from "react-router-dom";
+import Cookies from 'js-cookie';
+
+
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [token, setToken] = useState("");
-  const [isLogin, SetIsLogin] = useState(false);
+  const [isLogin, SetIsLogin] = useState(true);
+
   
   useEffect(() => {
-    let token = axios.get("http://localhost:5000/token");
+    const token = localStorage.getItem('refreshToken');
+    console.log(token);
     if (token) {
       SetIsLogin(true);
     } else {
       SetIsLogin(false);
     }
-  }, []);
-  
-
-  useEffect(() => {
     refreshToken();
   }, []);
 
@@ -30,6 +30,13 @@ const Navbar = () => {
     try {
       const response = await axios.get("http://localhost:5000/token");
       setToken(response.data.accessToken);
+      let token = await axios.get("http://localhost:5000/token");
+      setToken(response.data.accessToken);
+      if (token) {
+        SetIsLogin(true);
+      } else {
+        SetIsLogin(false);
+      }
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
     } catch (error) {}
@@ -74,12 +81,10 @@ const Navbar = () => {
               <NavLink className="nav-link" to="/fr">
                 <p className="item animasi-left-right">Financial Record</p>
               </NavLink>
-            </li>
-           
-           
+            </li> 
             <li>
-              <NavLink className="name" to="/profile">
-                <p className=" item animasi-left-right">{name}</p>
+              <NavLink style={{ textDecoration: "none" }} className="name" to="/profile">
+              <button className="tombollogin m-2">{name}</button>
               </NavLink>
             </li>
             <li>
